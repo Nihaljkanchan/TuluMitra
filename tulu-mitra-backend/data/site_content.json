@@ -1,0 +1,75 @@
+{
+  "about": "Text the website shows that the admin page can edit. The frontend uses its own built-in copy when the backend is not connected.",
+  "greetings": {
+    "headline": {
+      "tulu": "ಸೊಲ್ಮೆಲು",
+      "roman": "solmelu",
+      "english": "Greetings"
+    },
+    "time_of_day": [
+      {
+        "from": 5,
+        "to": 12,
+        "key": "morning",
+        "english": "Good morning"
+      },
+      {
+        "from": 12,
+        "to": 17,
+        "key": "afternoon",
+        "english": "Good afternoon"
+      },
+      {
+        "from": 17,
+        "to": 21,
+        "key": "evening",
+        "english": "Good evening"
+      },
+      {
+        "from": 21,
+        "to": 29,
+        "key": "night",
+        "english": "Up late"
+      }
+    ],
+    "questions": [
+      {
+        "tulu": "ಎಂಚ ಉಲ್ಲರ್?",
+        "roman": "encha ullar?",
+        "english": "How are you?",
+        "when": [],
+        "visit": ""
+      },
+      {
+        "tulu": "ಎಂಚ ಉಲ್ಲ?",
+        "roman": "encha ulla?",
+        "english": "How are you? (to a friend)",
+        "when": [],
+        "visit": "returning"
+      },
+      {
+        "tulu": "ಇನಿ ದಾದ ಕಲ್ಪುವ?",
+        "roman": "ini daada kalpuva?",
+        "english": "What shall we learn today?",
+        "when": [],
+        "visit": "returning"
+      },
+      {
+        "tulu": "ಊಟ ಆಂಡಾ?",
+        "roman": "oota aanda?",
+        "english": "Have you eaten?",
+        "when": [
+          "afternoon",
+          "night"
+        ],
+        "visit": "returning"
+      }
+    ],
+    "visit_lines": {
+      "first": "Nice to meet you, {name}",
+      "returning": "Welcome back, {name}",
+      "long_away": "Good to see you again, {name}"
+    },
+    "long_away_days": 3
+  }
+}

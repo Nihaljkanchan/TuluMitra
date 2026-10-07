@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment / Secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Frontend builds
+dist/
+build/
+.next/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Backup folders
+backend-backup-*/
+src-backup-*/
+TuluMitra-backups/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large ML / model files
+*.pt
+*.pth
+*.bin
+*.onnx
+*.h5
+*.keras
+*.safetensors
+*.pkl
+*.joblib

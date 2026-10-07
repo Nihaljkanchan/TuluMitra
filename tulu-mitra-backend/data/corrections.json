@@ -1,0 +1,18 @@
+[
+  {
+    "id": "f587e8e202c4",
+    "report": "d48d6f062abc",
+    "kind": "lesson",
+    "input": "ಎಂಕ್ ಎಡ್ಡೆ ಉಂಡು",
+    "direction": "",
+    "wrong": {
+      "tulu": "ಎಂಕ್ ಎಡ್ಡೆ ಉಂಡು",
+      "roman": "enk edde undu",
+      "english": "I am well."
+    },
+    "tulu": "ಯಾನ್ ಉಷಾರ್ ಉಲ್ಲೆ",
+    "roman": "yaan ushar ulle",
+    "english": "I am well.",
+    "approved": 1790748058
+  }
+]

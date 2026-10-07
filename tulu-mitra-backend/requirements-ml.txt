@@ -1,0 +1,10 @@
+# Speech models: Whisper ASR, MMS/VITS TTS, LoRA adapters, voice conversion.
+# Install on top of requirements.txt:  pip install -r requirements-ml.txt
+# CPU-only torch is smaller: pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+torchaudio>=2.2      # used by kNN-VC voice conversion
+transformers>=4.40
+peft>=0.10
+accelerate>=0.30
+librosa>=0.10
+uroman>=1.3          # romaniser some MMS voices need

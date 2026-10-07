@@ -1,0 +1,161 @@
+﻿id,number,roman,tulu,english,category,status,note
+S001,1,Namaskara,ನಮಸ್ಕಾರ,Hello / Greetings,greetings,check,looks like Kannada: Namaskara; project word list has ಸೊಲ್ಮೆಲು (solmelu)
+S002,2,Ull onde?,ಉಲ್ ಒಂದೆ?,How are you?,greetings,check,project word list has ಎಂಚ ಉಲ್ಲರ್? (encha ullar?)
+S003,3,Nanu chalu ulle,ನಾನು ಚಾಲು ಉಲ್ಲೆ,I am fine,greetings,check,looks like Kannada: nanu
+S004,4,Barta?,ಬರ್ತ?,Are you coming?,greetings,ok,
+S005,5,An barte,ಆನ್ ಬರ್ತೆ,I am coming,greetings,ok,
+S006,6,Pogona,ಪೋಗೊನ,Let's go,greetings,ok,
+S007,7,Ba,ಬಾ,Come,greetings,check,project word list has ಬಲ (bala)
+S008,8,Po,ಪೋ,Go,greetings,check,project word list has ಪೋಲ (pola)
+S009,9,Baikalu pogona,ಬೈಕಲು ಪೋಗೊನ,Let's go outside,greetings,ok,
+S010,10,Onji nimisha iru,ಒಂಜಿ ನಿಮಿಷ ಇರು,Wait a moment,greetings,ok,
+S011,11,Dhanyavadagalu,ಧನ್ಯವಾದಗಳು,Thank you,greetings,check,looks like Kannada: Dhanyavadagalu
+S012,12,Manikku pogona,ಮನಿಕ್ಕು ಪೋಗೊನ,Let's go home,greetings,ok,
+S013,13,Shubha dinappu,ಶುಭ ದಿನಪ್ಪು,Good day,greetings,check,looks like Kannada: Shubha …
+S014,14,Shubha ratri,ಶುಭ ರಾತ್ರಿ,Good night,greetings,check,looks like Kannada: Shubha …
+S015,15,Shubha prabhata,ಶುಭ ಪ್ರಭಾತ,Good morning,greetings,check,looks like Kannada: Shubha …
+S016,16,Ninna peru enu?,ನಿನ್ನ ಪೆರು ಏನು?,What is your name?,introductions,check,"looks like Kannada: ninna, peru, enu; project word list has ಈರೆನ ಪುದರ್ ದಾದ? (eerena pudar daada?)"
+S017,17,Yana peru ___ and,ಯಾನ ಪೆರು ___ ಆಂಡ್,My name is ___,introductions,skip,"blank ___ is different for each speaker: give the words each person said in recordings/metadata.csv, or leave it out; looks like Kannada: peru"
+S018,18,Nin ettu ulle?,ನಿನ್ ಎತ್ತು ಉಲ್ಲೆ?,Where are you from?,introductions,ok,
+S019,19,Yana ___ dand,ಯಾನ ___ ದಂಡ್,I am from ___,introductions,skip,"blank ___ is different for each speaker: give the words each person said in recordings/metadata.csv, or leave it out"
+S020,20,Ninna ger enu?,ನಿನ್ನ ಗೆರ್ ಏನು?,What is your surname?,introductions,check,"looks like Kannada: ninna, enu"
+S021,21,Nin enu maltay?,ನಿನ್ ಏನು ಮಲ್ತಯ್?,What do you do?,introductions,check,looks like Kannada: enu
+S022,22,Yana vidyarthi and,ಯಾನ ವಿದ್ಯಾರ್ಥಿ ಆಂಡ್,I am a student,introductions,ok,
+S023,23,Yana aspatreyanu barpini,ಯಾನ ಆಸ್ಪತ್ರೆಯನು ಬರ್ಪಿನಿ,I work at a hospital,introductions,ok,
+S024,24,Ninna vaysu enu?,ನಿನ್ನ ವಯ್ಸು ಏನು?,What is your age?,introductions,check,"looks like Kannada: ninna, enu"
+S025,25,Yanage ___ varsha and,ಯಾನಗೆ ___ ವರ್ಷ ಆಂಡ್,I am ___ years old,introductions,skip,"blank ___ is different for each speaker: give the words each person said in recordings/metadata.csv, or leave it out; looks like Kannada: varsha"
+S026,26,Ninna maneya peru enu?,ನಿನ್ನ ಮನೆಯ ಪೆರು ಏನು?,What is your house name?,introductions,check,"looks like Kannada: ninna, maneya, peru, enu"
+S027,27,Nin yavooru ulle?,ನಿನ್ ಯಾವೂರು ಉಲ್ಲೆ?,Which place are you from?,introductions,ok,
+S028,28,Nin paddu illiya?,ನಿನ್ ಪದ್ದು ಇಲ್ಲಿಯ?,Did you study here?,introductions,ok,
+S029,29,Yana illiye padudhe,ಯಾನ ಇಲ್ಲಿಯೆ ಪದುದೆ,I studied here,introductions,ok,
+S030,30,Nin illi etna kaal ulle?,ನಿನ್ ಇಲ್ಲಿ ಎತ್ನ ಕಾಲ್ ಉಲ್ಲೆ?,How long have you been here?,introductions,ok,
+S031,31,Yanage hasi and,ಯಾನಗೆ ಹಸಿ ಆಂಡ್,I am hungry,daily_phrases,check,looks like Kannada: hasi
+S032,32,Yanage neeru beku,ಯಾನಗೆ ನೀರು ಬೇಕು,I need water,daily_phrases,check,"looks like Kannada: neeru, beku"
+S033,33,Yanage nidde and,ಯಾನಗೆ ನಿದ್ದೆ ಆಂಡ್,I am sleepy,daily_phrases,check,looks like Kannada: nidde
+S034,34,Yanage ayasa and,ಯಾನಗೆ ಆಯಾಸ ಆಂಡ್,I am tired,daily_phrases,ok,
+S035,35,Adu enu?,ಅದು ಏನು?,What is that?,daily_phrases,check,looks like Kannada: enu
+S036,36,Idu enu?,ಇದು ಏನು?,What is this?,daily_phrases,check,looks like Kannada: enu
+S037,37,Nin enkulu ulle?,ನಿನ್ ಎಂಕುಲು ಉಲ್ಲೆ?,Where are you?,daily_phrases,ok,
+S038,38,Yana illi ulle,ಯಾನ ಇಲ್ಲಿ ಉಲ್ಲೆ,I am here,daily_phrases,ok,
+S039,39,Adu cholu and,ಅದು ಚೊಲು ಆಂಡ್,That is good,daily_phrases,ok,
+S040,40,Idu beda,ಇದು ಬೇಡ,I don't want this,daily_phrases,check,looks like Kannada: beda
+S041,41,Yanage gotthu,ಯಾನಗೆ ಗೊತ್ತು,I know,daily_phrases,ok,
+S042,42,Yanage gotthilla,ಯಾನಗೆ ಗೊತ್ತಿಲ್ಲ,I don't know,daily_phrases,check,looks like Kannada: gotthilla
+S043,43,Saari,ಸಾರಿ,Okay / Alright,daily_phrases,ok,
+S044,44,Aavu,ಆವು,Yes,daily_phrases,check,looks like Kannada: aavu
+S045,45,Ille,ಇಲ್ಲೆ,No,daily_phrases,check,looks like Kannada: ille
+S046,46,Yanage help maala,ಯಾನಗೆ ಹೆಲ್ಪ್ ಮಾಲ,Help me,daily_phrases,ok,
+S047,47,Adu yavaaga aagunu?,ಅದು ಯಾವಾಗ ಆಗುನು?,When will that happen?,daily_phrases,check,looks like Kannada: yavaaga
+S048,48,Toodu maa,ತೂದು ಮಾ,Show me,daily_phrases,ok,
+S049,49,Oddu maa,ಒದ್ದು ಮಾ,Read it,daily_phrases,ok,
+S050,50,Barta?,ಬರ್ತ?,Will you come?,daily_phrases,ok,same sentence as #4
+S051,51,Nin enu thintay?,ನಿನ್ ಏನು ತಿಂತಯ್?,What are you eating?,food_drink,check,looks like Kannada: enu
+S052,52,Yana annu thintae,ಯಾನ ಅನ್ನು ತಿಂತೆ,I am eating rice,food_drink,ok,
+S053,53,Neeru kodu,ನೀರು ಕೊಡು,Give water,food_drink,check,looks like Kannada: neeru
+S054,54,Chai maala,ಚಾಯ್ ಮಾಲ,Make tea,food_drink,ok,
+S055,55,Adu ruchi and,ಅದು ರುಚಿ ಆಂಡ್,That is tasty,food_drink,ok,
+S056,56,Yanage kaapi beku,ಯಾನಗೆ ಕಾಪಿ ಬೇಕು,I want coffee,food_drink,check,looks like Kannada: beku
+S057,57,Annu kaaydu ponnd,ಅನ್ನು ಕಾಯ್ದು ಪೊಂಡ್,Rice is finished,food_drink,ok,
+S058,58,Tarkaari enu undu?,ತರ್ಕಾರಿ ಏನು ಉಂಡು?,What vegetables are there?,food_drink,check,looks like Kannada: enu
+S059,59,Yanage meenu priya,ಯಾನಗೆ ಮೀನು ಪ್ರಿಯ,I like fish,food_drink,ok,
+S060,60,Aambe pandu undu?,ಆಂಬೆ ಪಂಡು ಉಂಡು?,Is there mango fruit?,food_drink,ok,
+S061,61,Tindi ready aandaa?,ತಿಂಡಿ ರೆಡಿ ಆಂಡಾ?,Is food ready?,food_drink,ok,
+S062,62,Bisu bisu tindi beku,ಬಿಸು ಬಿಸು ತಿಂಡಿ ಬೇಕು,I want hot food,food_drink,check,looks like Kannada: beku
+S063,63,Adu thinka beda,ಅದು ತಿಂಕ ಬೇಡ,Don't eat that,food_drink,check,looks like Kannada: beda
+S064,64,Nin thinda aandaa?,ನಿನ್ ತಿಂದ ಆಂಡಾ?,Have you eaten?,food_drink,ok,
+S065,65,Yana thinda aande,ಯಾನ ತಿಂದ ಆಂಡೆ,I have eaten,food_drink,ok,
+S066,66,Onji,ಒಂಜಿ,One,numbers_time,ok,
+S067,67,Raddu,ರಡ್ಡು,Two,numbers_time,ok,
+S068,68,Mooji,ಮೂಜಿ,Three,numbers_time,ok,
+S069,69,Naal,ನಾಲ್,Four,numbers_time,ok,
+S070,70,Aaynu,ಆಯ್ನು,Five,numbers_time,check,project word list has ಐನ್ (ain)
+S071,71,Aaji,ಆಜಿ,Six,numbers_time,ok,
+S072,72,Yelu,ಏಳು,Seven,numbers_time,ok,
+S073,73,Ettu,ಎಟ್ಟು,Eight,numbers_time,check,project word list has ಎಣ್ಮ (enma)
+S074,74,Ormbodu,ಒರ್ಂಬೊದು,Nine,numbers_time,check,project word list has ಒರ್ಂಬ (ormba)
+S075,75,Pattu,ಪತ್ತು,Ten,numbers_time,ok,
+S076,76,En gante and?,ಎನ್ ಗಂಟೆ ಆಂಡ್?,What time is it?,numbers_time,ok,
+S077,77,Raddu gante and,ರಡ್ಡು ಗಂಟೆ ಆಂಡ್,It is two o'clock,numbers_time,ok,
+S078,78,Inikku enu dinapu?,ಇನಿಕ್ಕು ಏನು ದಿನಪು?,What day is today?,numbers_time,check,looks like Kannada: enu
+S079,79,Naale barpe,ನಾಳೆ ಬರ್ಪೆ,I will come tomorrow,numbers_time,check,looks like Kannada: naale
+S080,80,Innilu barpe,ಇನ್ನಿಲು ಬರ್ಪೆ,I will come day after tomorrow,numbers_time,ok,
+S081,81,Inikku somavaara,ಇನಿಕ್ಕು ಸೋಮವಾರ,Today is Monday,numbers_time,ok,
+S082,82,En tarikhattu?,ಎನ್ ತಾರೀಖತ್ತು?,What is the date?,numbers_time,ok,
+S083,83,Biddu ponnd,ಬಿದ್ದು ಪೊಂಡ್,It is late,numbers_time,ok,
+S084,84,Bega ba,ಬೇಗ ಬಾ,Come fast,numbers_time,ok,
+S085,85,Nidaanavay maala,ನಿದಾನವಯ್ ಮಾಲ,Do it slowly,numbers_time,ok,
+S086,86,Nin enkulu pottay?,ನಿನ್ ಎಂಕುಲು ಪೊತ್ತಯ್?,Where are you going?,directions_places,ok,
+S087,87,Yana manikilluku potte,ಯಾನ ಮನಿಕಿಲ್ಲುಕು ಪೊತ್ತೆ,I am going home,directions_places,ok,
+S088,88,Angadi enkulu undu?,ಅಂಗಡಿ ಎಂಕುಲು ಉಂಡು?,Where is the shop?,directions_places,ok,
+S089,89,Muttuvere po,ಮುತ್ತುವೆರೆ ಪೋ,Go straight,directions_places,ok,
+S090,90,Bala korae thiri,ಬಲ ಕೊರೆ ತಿರಿ,Turn right,directions_places,ok,
+S091,91,Edde korae thiri,ಎಡ್ಡೆ ಕೊರೆ ತಿರಿ,Turn left,directions_places,ok,
+S092,92,Aspatrey illi undaa?,ಆಸ್ಪತ್ರೆ ಇಲ್ಲಿ ಉಂಡಾ?,Is the hospital here?,directions_places,ok,
+S093,93,Bus nilpuni enkulu?,ಬಸ್ ನಿಲ್ಪುನಿ ಎಂಕುಲು?,Where is the bus stop?,directions_places,ok,
+S094,94,Illi durada enkulu?,ಇಲ್ಲಿ ದೂರದ ಎಂಕುಲು?,How far is it from here?,directions_places,ok,
+S095,95,Ina nadi irundu,ಇನ ನದಿ ಇರುಂಡು,There is a river here,directions_places,ok,
+S096,96,Yanage santosha and,ಯಾನಗೆ ಸಂತೋಷ ಆಂಡ್,I am happy,feelings,ok,
+S097,97,Yanage dukha and,ಯಾನಗೆ ದುಃಖ ಆಂಡ್,I am sad,feelings,ok,
+S098,98,Yanage bhaya and,ಯಾನಗೆ ಭಯ ಆಂಡ್,I am scared,feelings,ok,
+S099,99,Yanage ayasa and,ಯಾನಗೆ ಆಯಾಸ ಆಂಡ್,I am tired,feelings,ok,same sentence as #34
+S100,100,Adu cholu and,ಅದು ಚೊಲು ಆಂಡ್,That is nice,feelings,ok,same sentence as #39
+S101,101,Yanage kopa and,ಯಾನಗೆ ಕೋಪ ಆಂಡ್,I am angry,feelings,ok,
+S102,102,Yana surprise aande,ಯಾನ ಸರ್ಪ್ರೈಸ್ ಆಂಡೆ,I am surprised,feelings,ok,
+S103,103,Adu adbhutha and,ಅದು ಅದ್ಭುತ ಆಂಡ್,That is amazing,feelings,ok,
+S104,104,Yanage aase and,ಯಾನಗೆ ಆಸೆ ಆಂಡ್,I have a wish,feelings,ok,
+S105,105,Yana chinthistina,ಯಾನ ಚಿಂತಿಸ್ತಿನ,I am thinking,feelings,ok,
+S106,106,Nin padupaaya?,ನಿನ್ ಪದುಪಾಯ?,Are you studying?,learning,ok,
+S107,107,Yana padupe,ಯಾನ ಪದುಪೆ,I am studying,learning,ok,
+S108,108,Idu enu artha and?,ಇದು ಏನು ಅರ್ಥ ಆಂಡ್?,What is the meaning of this?,learning,check,looks like Kannada: enu
+S109,109,Puna oddu maa,ಪುನ ಒದ್ದು ಮಾ,Read again,learning,ok,
+S110,110,Bareda toori,ಬರೆದ ತೂರಿ,Show me in writing,learning,ok,
+S111,111,Nin Tulu padidhiyaa?,ನಿನ್ ತುಳು ಪದಿದಿಯಾ?,Have you learned Tulu?,learning,ok,
+S112,112,Tulu maatu kalpona,ತುಳು ಮಾತು ಕಲ್ಪೊನ,Let's learn to speak Tulu,learning,ok,
+S113,113,Adu yanage kashtavu,ಅದು ಯಾನಗೆ ಕಷ್ಟವು,That is difficult for me,learning,ok,
+S114,114,Yana tappi maade,ಯಾನ ತಪ್ಪಿ ಮಾಡೆ,I made a mistake,learning,ok,
+S115,115,Puna maala,ಪುನ ಮಾಲ,Do it again,learning,ok,
+S116,116,Nin arthu maalo,ನಿನ್ ಅರ್ತು ಮಾಲೊ,You explain it,learning,ok,
+S117,117,Idu yanage gotthaandu,ಇದು ಯಾನಗೆ ಗೊತ್ತಾಂಡು,I understood this,learning,ok,
+S118,118,Idu yanage gotthaagandu,ಇದು ಯಾನಗೆ ಗೊತ್ತಾಗಂಡು,I did not understand this,learning,ok,
+S119,119,Kelpu maala,ಕೆಲ್ಪು ಮಾಲ,Ask a question,learning,ok,
+S120,120,Udaaharana kodu,ಉದಾಹರಣ ಕೊಡು,Give an example,learning,ok,
+S121,121,Nilikku,ನಿಲಿಕ್ಕು,Stop,commands,ok,
+S122,122,Ba illi,ಬಾ ಇಲ್ಲಿ,Come here,commands,ok,
+S123,123,Kelpu,ಕೆಲ್ಪು,Listen,commands,ok,
+S124,124,Nodu,ನೋಡು,See / Look,commands,check,looks like Kannada: nodu
+S125,125,Toodu,ತೂದು,Show,commands,ok,
+S126,126,Kodu,ಕೊಡು,Give,commands,ok,
+S127,127,Maala,ಮಾಲ,Do it,commands,ok,
+S128,128,Bari,ಬರಿ,Write,commands,ok,
+S129,129,Oddu,ಒದ್ದು,Read,commands,ok,
+S130,130,Po attu,ಪೋ ಅತ್ತು,Go there,commands,ok,
+S131,131,Muttuvere ba,ಮುತ್ತುವೆರೆ ಬಾ,Come straight,commands,ok,
+S132,132,Bega maala,ಬೇಗ ಮಾಲ,Do it quickly,commands,ok,
+S133,133,Nidaanavay maala,ನಿದಾನವಯ್ ಮಾಲ,Do it slowly,commands,ok,same sentence as #85
+S134,134,Puna maala,ಪುನ ಮಾಲ,Do again,commands,ok,same sentence as #115
+S135,135,Beedu,ಬೀಡು,Leave it / Let go,commands,ok,
+S136,136,Tikko,ತಿಕ್ಕೊ,Take it,commands,ok,
+S137,137,Ettiko,ಎತ್ತಿಕೊ,Pick it up,commands,ok,
+S138,138,Illi iru,ಇಲ್ಲಿ ಇರು,Stay here,commands,ok,
+S139,139,Kelkuluru,ಕೆಲ್ಕುಲುರು,Listen carefully,commands,ok,
+S140,140,Oggu baradu,ಒಗ್ಗು ಬರದು,Don't come inside,commands,ok,
+S141,141,Yanage novu and,ಯಾನಗೆ ನೋವು ಆಂಡ್,I am in pain,health,ok,
+S142,142,Yanage jwara and,ಯಾನಗೆ ಜ್ವರ ಆಂಡ್,I have fever,health,ok,
+S143,143,Tala novundu,ತಲ ನೋವುಂಡು,Head is aching,health,ok,
+S144,144,Bayi novundu,ಬಯಿ ನೋವುಂಡು,Stomach is aching,health,ok,
+S145,145,Aspatreyaku pogona,ಆಸ್ಪತ್ರೆಯಕು ಪೋಗೊನ,Let's go to the hospital,health,ok,
+S146,146,Doctor kelpu maala,ಡಾಕ್ಟರ್ ಕೆಲ್ಪು ಮಾಲ,Consult the doctor,health,ok,
+S147,147,Maatra tikko,ಮಾತ್ರ ತಿಕ್ಕೊ,Take the medicine,health,ok,
+S148,148,Nin sulabha aandiyaa?,ನಿನ್ ಸುಲಭ ಆಂಡಿಯಾ?,Are you well now?,health,ok,
+S149,149,Yana sulabha aande,ಯಾನ ಸುಲಭ ಆಂಡೆ,I am well now,health,ok,
+S150,150,Bisi neeru kudi,ಬಿಸಿ ನೀರು ಕುಡಿ,Drink hot water,health,check,"looks like Kannada: neeru, kudi"
+S151,151,Inikku maari barpundu,ಇನಿಕ್ಕು ಮಾರಿ ಬರ್ಪುಂಡು,It will rain today,weather_nature,ok,
+S152,152,Bisi and,ಬಿಸಿ ಆಂಡ್,It is hot,weather_nature,ok,
+S153,153,Tunne and,ತುನ್ನೆ ಆಂಡ್,It is cold,weather_nature,ok,
+S154,154,Gaali barpundu,ಗಾಳಿ ಬರ್ಪುಂಡು,Wind is blowing,weather_nature,ok,
+S155,155,Bejja maari and,ಬೆಜ್ಜ ಮಾರಿ ಆಂಡ್,It is raining heavily,weather_nature,ok,
+S156,156,Belaku barpundu,ಬೆಳಕು ಬರ್ಪುಂಡು,Sun is coming out,weather_nature,ok,
+S157,157,Illi kadalu undu,ಇಲ್ಲಿ ಕಡಲು ಉಂಡು,There is sea here,weather_nature,ok,
+S158,158,Maaru daddha and,ಮಾರು ದದ್ದ ಆಂಡ್,The tree is big,weather_nature,ok,
+S159,159,Nadi cholu and,ನದಿ ಚೊಲು ಆಂಡ್,The river is beautiful,weather_nature,ok,
+S160,160,Raatri and,ರಾತ್ರಿ ಆಂಡ್,It is night,weather_nature,ok,

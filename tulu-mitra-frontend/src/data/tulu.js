@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Tulu phrase content for the Learn page.
+
+   IMPORTANT — every Tulu phrase in the app lives in this one file.
+   Each entry carries three fields so the app works for someone who reads
+   Kannada script, someone who only reads English, or both:
+
+     tulu    Tulu written in Kannada script
+     roman   the same words in Latin letters, for learners who cannot read
+             Kannada script at all
+     english the meaning
+
+   Have a native speaker or the project corpus verify these before the demo:
+   edit this file only, nothing else needs to change.
+   ========================================================================== */
+
+export const LESSON_CATEGORIES = [
+  {
+    id: "greetings",
+    label: "Greetings",
+    kn: "ಸಂಭಾಷಣೆ",
+    blurb: "Openers you will use in the first ten seconds of any conversation.",
+    items: [
+      { tulu: "ಎಂಚ ಉಲ್ಲರ್?", roman: "encha ullar?", english: "How are you?" },
+      { tulu: "ಎಂಕ್ ಎಡ್ಡೆ ಉಂಡು", roman: "enk edde undu", english: "I am well." },
+      { tulu: "ಈರೆನ ಪುದರ್ ದಾದ?", roman: "eerena pudar daada?", english: "What is your name?" },
+      { tulu: "ಎನ್ನ ಪುದರ್ ಅಭಿಷೇಕ್", roman: "enna pudar Abhishek", english: "My name is Abhishek." },
+      { tulu: "ಸೊಲ್ಮೆಲು", roman: "solmelu", english: "Greetings." },
+      { tulu: "ಬೊಕ್ಕ ತಿಕ್ಕುಗ", roman: "bokka tikkuga", english: "See you again." },
+    ],
+  },
+  {
+    id: "food",
+    label: "Food",
+    kn: "ತಿನಸ್",
+    blurb: "Coastal kitchen vocabulary, from water to the day's meal.",
+    items: [
+      { tulu: "ನೀರ್", roman: "neer", english: "Water" },
+      { tulu: "ನುಪ್ಪು", roman: "nuppu", english: "Cooked rice" },
+      { tulu: "ಮೀನ್", roman: "meen", english: "Fish" },
+      { tulu: "ಪೆಲಕಾಯಿ", roman: "pelakaayi", english: "Jackfruit" },
+      { tulu: "ಬಜಿಲ್", roman: "bajil", english: "Beaten rice" },
+      { tulu: "ಎಂಕ್ ಬಚ್ಚಿರೆ ಆಪುಂಡು", roman: "enk bacchire aapundu", english: "I am hungry." },
+    ],
+  },
+  {
+    id: "daily",
+    label: "Daily phrases",
+    kn: "ದಿನೊತ ಮಾತು",
+    blurb: "Short lines that carry most of an ordinary day.",
+    items: [
+      { tulu: "ಒವು?", roman: "ovu?", english: "Which one?" },
+      { tulu: "ಎಂಚಿನ?", roman: "enchina?", english: "What is it?" },
+      { tulu: "ಒಲ್ಪ ಪೋಪುಗ?", roman: "olpa popuga?", english: "Where are you going?" },
+      { tulu: "ಎಂಕ್ ಗೊತ್ತಿಜ್ಜಿ", roman: "enk gottijji", english: "I do not know." },
+      { tulu: "ಸರಿ", roman: "sari", english: "Alright." },
+      { tulu: "ದಯ ಮಲ್ತ್‌ದ್", roman: "daya maltd", english: "Please." },
+    ],
+  },
+  {
+    id: "commands",
+    label: "Commands",
+    kn: "ಪಂಡ್‌ದ್",
+    blurb: "The request forms you can speak straight into the assistant.",
+    items: [
+      { tulu: "ಬಲ", roman: "bala", english: "Come." },
+      { tulu: "ಪೋಲ", roman: "pola", english: "Go." },
+      { tulu: "ಕುಲ್ಲುಲೆ", roman: "kullule", english: "Please sit." },
+      { tulu: "ಪಂಡ್‌ಲೆ", roman: "pandle", english: "Please say it." },
+      { tulu: "ಒಂತೆ ತಾಳ್ಮೆ ಮಲ್ಪುಲೆ", roman: "onte taalme malpule", english: "Please wait a moment." },
+    ],
+  },
+];
+
+/* Opening suggestions on the home screen, per input language. */
+export const OPENERS = {
+  english: ["How are you?", "What is your name?", "Tell me a story"],
+  kannada: ["ನೀವು ಹೇಗಿದ್ದೀರಿ?", "ನಿಮ್ಮ ಹೆಸರೇನು?", "ಒಂದು ಕಥೆ ಹೇಳಿ"],
+  tulu: ["ಎಂಚ ಉಲ್ಲರ್?", "ಈರೆನ ಪುದರ್ ದಾದ?", "ಒಂಜಿ ಕತೆ ಪಂಡ್‌ಲೆ"],
+};

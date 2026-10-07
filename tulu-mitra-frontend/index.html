@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#3c3489" />
+    <meta name="description" content="ತುಳು ಮಿತ್ರ — an AI-powered Tulu voice assistant for speaking, learning and translating Tulu." />
+    <title>ತುಳು ಮಿತ್ರ · Tulu Mitra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Marcellus&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Noto+Serif+Kannada:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      /* Apply the saved theme (or the computer's) before the page draws. */
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("tulumitra:theme"); } catch (e) {}
+        if (t !== "light" && t !== "dark")
+          t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+        if (t === "dark") document.querySelector('meta[name="theme-color"]').setAttribute("content", "#13111a");
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

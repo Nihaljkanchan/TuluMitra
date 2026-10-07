@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+storage/
+models/*
+!models/README.md
+training/recordings/*
+!training/recordings/README.md
+training/processed/
+.venv/

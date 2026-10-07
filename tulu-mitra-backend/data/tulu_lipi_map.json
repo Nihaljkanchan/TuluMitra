@@ -1,0 +1,482 @@
+{
+  "script": "Tulu-Tigalari",
+  "unicode_block": "U+11380-U+113FF",
+  "unicode_version": "16.0",
+  "note": "Short e and short o are not encoded in Unicode; lipi is null for those.",
+  "groups": [
+    {
+      "id": "vowels",
+      "label": "Vowels",
+      "letters": [
+        {
+          "roman": "a",
+          "kannada": "ಅ",
+          "lipi": "𑎀",
+          "codepoint": "U+11380",
+          "unicode_name": "TULU-TIGALARI LETTER A"
+        },
+        {
+          "roman": "ā",
+          "kannada": "ಆ",
+          "lipi": "𑎁",
+          "codepoint": "U+11381",
+          "unicode_name": "TULU-TIGALARI LETTER AA"
+        },
+        {
+          "roman": "i",
+          "kannada": "ಇ",
+          "lipi": "𑎂",
+          "codepoint": "U+11382",
+          "unicode_name": "TULU-TIGALARI LETTER I"
+        },
+        {
+          "roman": "ī",
+          "kannada": "ಈ",
+          "lipi": "𑎃",
+          "codepoint": "U+11383",
+          "unicode_name": "TULU-TIGALARI LETTER II"
+        },
+        {
+          "roman": "u",
+          "kannada": "ಉ",
+          "lipi": "𑎄",
+          "codepoint": "U+11384",
+          "unicode_name": "TULU-TIGALARI LETTER U"
+        },
+        {
+          "roman": "ū",
+          "kannada": "ಊ",
+          "lipi": "𑎅",
+          "codepoint": "U+11385",
+          "unicode_name": "TULU-TIGALARI LETTER UU"
+        },
+        {
+          "roman": "ṛ",
+          "kannada": "ಋ",
+          "lipi": "𑎆",
+          "codepoint": "U+11386",
+          "unicode_name": "TULU-TIGALARI LETTER VOCALIC R"
+        },
+        {
+          "roman": "ṝ",
+          "kannada": "ೠ",
+          "lipi": "𑎇",
+          "codepoint": "U+11387",
+          "unicode_name": "TULU-TIGALARI LETTER VOCALIC RR"
+        },
+        {
+          "roman": "e",
+          "kannada": "ಎ",
+          "lipi": null,
+          "codepoint": null,
+          "unicode_name": null
+        },
+        {
+          "roman": "ē",
+          "kannada": "ಏ",
+          "lipi": "𑎋",
+          "codepoint": "U+1138B",
+          "unicode_name": "TULU-TIGALARI LETTER EE"
+        },
+        {
+          "roman": "ai",
+          "kannada": "ಐ",
+          "lipi": "𑎎",
+          "codepoint": "U+1138E",
+          "unicode_name": "TULU-TIGALARI LETTER AI"
+        },
+        {
+          "roman": "o",
+          "kannada": "ಒ",
+          "lipi": null,
+          "codepoint": null,
+          "unicode_name": null
+        },
+        {
+          "roman": "ō",
+          "kannada": "ಓ",
+          "lipi": "𑎐",
+          "codepoint": "U+11390",
+          "unicode_name": "TULU-TIGALARI LETTER OO"
+        },
+        {
+          "roman": "au",
+          "kannada": "ಔ",
+          "lipi": "𑎑",
+          "codepoint": "U+11391",
+          "unicode_name": "TULU-TIGALARI LETTER AU"
+        }
+      ]
+    },
+    {
+      "id": "ka",
+      "label": "Ka-varga",
+      "letters": [
+        {
+          "roman": "ka",
+          "kannada": "ಕ",
+          "lipi": "𑎒",
+          "codepoint": "U+11392",
+          "unicode_name": "TULU-TIGALARI LETTER KA"
+        },
+        {
+          "roman": "kha",
+          "kannada": "ಖ",
+          "lipi": "𑎓",
+          "codepoint": "U+11393",
+          "unicode_name": "TULU-TIGALARI LETTER KHA"
+        },
+        {
+          "roman": "ga",
+          "kannada": "ಗ",
+          "lipi": "𑎔",
+          "codepoint": "U+11394",
+          "unicode_name": "TULU-TIGALARI LETTER GA"
+        },
+        {
+          "roman": "gha",
+          "kannada": "ಘ",
+          "lipi": "𑎕",
+          "codepoint": "U+11395",
+          "unicode_name": "TULU-TIGALARI LETTER GHA"
+        },
+        {
+          "roman": "ṅa",
+          "kannada": "ಙ",
+          "lipi": "𑎖",
+          "codepoint": "U+11396",
+          "unicode_name": "TULU-TIGALARI LETTER NGA"
+        }
+      ]
+    },
+    {
+      "id": "ca",
+      "label": "Ca-varga",
+      "letters": [
+        {
+          "roman": "ca",
+          "kannada": "ಚ",
+          "lipi": "𑎗",
+          "codepoint": "U+11397",
+          "unicode_name": "TULU-TIGALARI LETTER CA"
+        },
+        {
+          "roman": "cha",
+          "kannada": "ಛ",
+          "lipi": "𑎘",
+          "codepoint": "U+11398",
+          "unicode_name": "TULU-TIGALARI LETTER CHA"
+        },
+        {
+          "roman": "ja",
+          "kannada": "ಜ",
+          "lipi": "𑎙",
+          "codepoint": "U+11399",
+          "unicode_name": "TULU-TIGALARI LETTER JA"
+        },
+        {
+          "roman": "jha",
+          "kannada": "ಝ",
+          "lipi": "𑎚",
+          "codepoint": "U+1139A",
+          "unicode_name": "TULU-TIGALARI LETTER JHA"
+        },
+        {
+          "roman": "ña",
+          "kannada": "ಞ",
+          "lipi": "𑎛",
+          "codepoint": "U+1139B",
+          "unicode_name": "TULU-TIGALARI LETTER NYA"
+        }
+      ]
+    },
+    {
+      "id": "tta",
+      "label": "Ṭa-varga",
+      "letters": [
+        {
+          "roman": "ṭa",
+          "kannada": "ಟ",
+          "lipi": "𑎜",
+          "codepoint": "U+1139C",
+          "unicode_name": "TULU-TIGALARI LETTER TTA"
+        },
+        {
+          "roman": "ṭha",
+          "kannada": "ಠ",
+          "lipi": "𑎝",
+          "codepoint": "U+1139D",
+          "unicode_name": "TULU-TIGALARI LETTER TTHA"
+        },
+        {
+          "roman": "ḍa",
+          "kannada": "ಡ",
+          "lipi": "𑎞",
+          "codepoint": "U+1139E",
+          "unicode_name": "TULU-TIGALARI LETTER DDA"
+        },
+        {
+          "roman": "ḍha",
+          "kannada": "ಢ",
+          "lipi": "𑎟",
+          "codepoint": "U+1139F",
+          "unicode_name": "TULU-TIGALARI LETTER DDHA"
+        },
+        {
+          "roman": "ṇa",
+          "kannada": "ಣ",
+          "lipi": "𑎠",
+          "codepoint": "U+113A0",
+          "unicode_name": "TULU-TIGALARI LETTER NNA"
+        }
+      ]
+    },
+    {
+      "id": "ta",
+      "label": "Ta-varga",
+      "letters": [
+        {
+          "roman": "ta",
+          "kannada": "ತ",
+          "lipi": "𑎡",
+          "codepoint": "U+113A1",
+          "unicode_name": "TULU-TIGALARI LETTER TA"
+        },
+        {
+          "roman": "tha",
+          "kannada": "ಥ",
+          "lipi": "𑎢",
+          "codepoint": "U+113A2",
+          "unicode_name": "TULU-TIGALARI LETTER THA"
+        },
+        {
+          "roman": "da",
+          "kannada": "ದ",
+          "lipi": "𑎣",
+          "codepoint": "U+113A3",
+          "unicode_name": "TULU-TIGALARI LETTER DA"
+        },
+        {
+          "roman": "dha",
+          "kannada": "ಧ",
+          "lipi": "𑎤",
+          "codepoint": "U+113A4",
+          "unicode_name": "TULU-TIGALARI LETTER DHA"
+        },
+        {
+          "roman": "na",
+          "kannada": "ನ",
+          "lipi": "𑎥",
+          "codepoint": "U+113A5",
+          "unicode_name": "TULU-TIGALARI LETTER NA"
+        }
+      ]
+    },
+    {
+      "id": "pa",
+      "label": "Pa-varga",
+      "letters": [
+        {
+          "roman": "pa",
+          "kannada": "ಪ",
+          "lipi": "𑎦",
+          "codepoint": "U+113A6",
+          "unicode_name": "TULU-TIGALARI LETTER PA"
+        },
+        {
+          "roman": "pha",
+          "kannada": "ಫ",
+          "lipi": "𑎧",
+          "codepoint": "U+113A7",
+          "unicode_name": "TULU-TIGALARI LETTER PHA"
+        },
+        {
+          "roman": "ba",
+          "kannada": "ಬ",
+          "lipi": "𑎨",
+          "codepoint": "U+113A8",
+          "unicode_name": "TULU-TIGALARI LETTER BA"
+        },
+        {
+          "roman": "bha",
+          "kannada": "ಭ",
+          "lipi": "𑎩",
+          "codepoint": "U+113A9",
+          "unicode_name": "TULU-TIGALARI LETTER BHA"
+        },
+        {
+          "roman": "ma",
+          "kannada": "ಮ",
+          "lipi": "𑎪",
+          "codepoint": "U+113AA",
+          "unicode_name": "TULU-TIGALARI LETTER MA"
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "label": "Other consonants",
+      "letters": [
+        {
+          "roman": "ya",
+          "kannada": "ಯ",
+          "lipi": "𑎫",
+          "codepoint": "U+113AB",
+          "unicode_name": "TULU-TIGALARI LETTER YA"
+        },
+        {
+          "roman": "ra",
+          "kannada": "ರ",
+          "lipi": "𑎬",
+          "codepoint": "U+113AC",
+          "unicode_name": "TULU-TIGALARI LETTER RA"
+        },
+        {
+          "roman": "la",
+          "kannada": "ಲ",
+          "lipi": "𑎭",
+          "codepoint": "U+113AD",
+          "unicode_name": "TULU-TIGALARI LETTER LA"
+        },
+        {
+          "roman": "va",
+          "kannada": "ವ",
+          "lipi": "𑎮",
+          "codepoint": "U+113AE",
+          "unicode_name": "TULU-TIGALARI LETTER VA"
+        },
+        {
+          "roman": "śa",
+          "kannada": "ಶ",
+          "lipi": "𑎯",
+          "codepoint": "U+113AF",
+          "unicode_name": "TULU-TIGALARI LETTER SHA"
+        },
+        {
+          "roman": "ṣa",
+          "kannada": "ಷ",
+          "lipi": "𑎰",
+          "codepoint": "U+113B0",
+          "unicode_name": "TULU-TIGALARI LETTER SSA"
+        },
+        {
+          "roman": "sa",
+          "kannada": "ಸ",
+          "lipi": "𑎱",
+          "codepoint": "U+113B1",
+          "unicode_name": "TULU-TIGALARI LETTER SA"
+        },
+        {
+          "roman": "ha",
+          "kannada": "ಹ",
+          "lipi": "𑎲",
+          "codepoint": "U+113B2",
+          "unicode_name": "TULU-TIGALARI LETTER HA"
+        }
+      ]
+    },
+    {
+      "id": "extra",
+      "label": "Additional letters",
+      "letters": [
+        {
+          "roman": "ḷa",
+          "kannada": "ಳ",
+          "lipi": "𑎳",
+          "codepoint": "U+113B3",
+          "unicode_name": "TULU-TIGALARI LETTER LLA"
+        },
+        {
+          "roman": "ṟa",
+          "kannada": "ಱ",
+          "lipi": "𑎴",
+          "codepoint": "U+113B4",
+          "unicode_name": "TULU-TIGALARI LETTER RRA"
+        },
+        {
+          "roman": "ḻa",
+          "kannada": "ೞ",
+          "lipi": "𑎵",
+          "codepoint": "U+113B5",
+          "unicode_name": "TULU-TIGALARI LETTER LLLA"
+        }
+      ]
+    }
+  ],
+  "signs": {
+    "ಾ": {
+      "lipi": "𑎸",
+      "codepoint": "U+113B8",
+      "unicode_name": "TULU-TIGALARI VOWEL SIGN AA"
+    },
+    "ಿ": {
+      "lipi": "𑎹",
+      "codepoint": "U+113B9",
+      "unicode_name": "TULU-TIGALARI VOWEL SIGN I"
+    },
+    "ೀ": {
+      "lipi": "𑎺",
+      "codepoint": "U+113BA",
+      "unicode_name": "TULU-TIGALARI VOWEL SIGN II"
+    },
+    "ು": {
+      "lipi": "𑎻",
+      "codepoint": "U+113BB",
+      "unicode_name": "TULU-TIGALARI VOWEL SIGN U"
+    },
+    "ೂ": {
+      "lipi": "𑎼",
+      "codepoint": "U+113BC",
+      "unicode_name": "TULU-TIGALARI VOWEL SIGN UU"
+    },
+    "ೃ": {
+      "lipi": "𑎽",
+      "codepoint": "U+113BD",
+      "unicode_name": "TULU-TIGALARI VOWEL SIGN VOCALIC R"
+    },
+    "ೄ": {
+      "lipi": "𑎾",
+      "codepoint": "U+113BE",
+      "unicode_name": "TULU-TIGALARI VOWEL SIGN VOCALIC RR"
+    },
+    "ೇ": {
+      "lipi": "𑏂",
+      "codepoint": "U+113C2",
+      "unicode_name": "TULU-TIGALARI VOWEL SIGN EE"
+    },
+    "ೈ": {
+      "lipi": "𑏅",
+      "codepoint": "U+113C5",
+      "unicode_name": "TULU-TIGALARI VOWEL SIGN AI"
+    },
+    "ೋ": {
+      "lipi": "𑏇",
+      "codepoint": "U+113C7",
+      "unicode_name": "TULU-TIGALARI VOWEL SIGN OO"
+    },
+    "ೌ": {
+      "lipi": "𑏈",
+      "codepoint": "U+113C8",
+      "unicode_name": "TULU-TIGALARI VOWEL SIGN AU"
+    },
+    "ಂ": {
+      "lipi": "𑏌",
+      "codepoint": "U+113CC",
+      "unicode_name": "TULU-TIGALARI SIGN ANUSVARA"
+    },
+    "ಃ": {
+      "lipi": "𑏍",
+      "codepoint": "U+113CD",
+      "unicode_name": "TULU-TIGALARI SIGN VISARGA"
+    },
+    "್": {
+      "lipi": "𑏎",
+      "codepoint": "U+113CE",
+      "unicode_name": "TULU-TIGALARI SIGN VIRAMA"
+    }
+  },
+  "unmapped": {
+    "ೆ": "short e — not encoded",
+    "ೊ": "short o — not encoded"
+  }
+}

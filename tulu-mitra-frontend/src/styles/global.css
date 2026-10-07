@@ -1,0 +1,450 @@
+/* ==========================================================================
+   ತುಳು ಮಿತ್ರ / Tulu Mitra — design system
+   One place for every token. Components reference these, never raw hex.
+   ========================================================================== */
+
+:root {
+  /* Core palette */
+  --purple: #3c3489;
+  --purple-deep: #2a2464;
+  --purple-soft: #5a51b8;
+  --purple-wash: #efedf9;
+  --purple-line: #ddd8f2;
+
+  --green: #085041;
+  --green-soft: #22705c;
+  --green-wash: #e5f0ec;
+
+  /* Temple brass — the traditional accent, used for motifs and rules */
+  --gold: #a8762b;
+  --gold-soft: #c39a54;
+  --gold-wash: #f7efdf;
+
+  /* Neutrals — warm parchment, the colour of palm-leaf manuscript paper */
+  --ink: #1d1826;
+  --ink-2: #4b4356;
+  --ink-3: #605669;
+  --ink-4: #6e6478; /* was lighter; darkened so small print stays readable */
+  --canvas: #fdfaf4;
+  --surface: #ffffff;
+  --surface-2: #f8f3e9;
+  --hairline: #ece2d2;
+  --hairline-strong: #ddd0b8;
+
+  --danger: #a3253c;
+  --danger-wash: #fbeef0;
+
+  --gold-ink: #6f4d17; /* gold text on gold wash */
+  --green-line: #d7e8e2;
+  --shimmer: #f0e8d9;
+
+  /* Solid fills that carry text (buttons, your chat bubbles, tooltips).
+     Kept separate from the accent colours above, because in dark mode an
+     accent must get lighter to be read as text, while a fill behind white
+     text must stay dark. */
+  --fill-purple: #3c3489;
+  --fill-purple-deep: #2a2464;
+  --fill-green: #085041;
+  --fill-ink: #1d1826;
+  --on-fill: #ffffff;
+
+  color-scheme: light;
+
+  /* Type */
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --kannada: "Noto Sans Kannada", "Inter", sans-serif;
+  /* Display faces carry the traditional register: an inscriptional Latin
+     serif, and the serif cut of Kannada for the Tulu wordmark. */
+  --display: "Marcellus", Georgia, serif;
+  --kannada-display: "Noto Serif Kannada", "Noto Sans Kannada", serif;
+
+  /* Radii — deliberately varied by role, not one value everywhere */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-pill: 999px;
+
+  /* Elevation — tinted toward the brand, only two levels */
+  --shadow-1: 0 1px 2px rgba(29, 24, 38, 0.04), 0 2px 8px rgba(60, 52, 137, 0.05);
+  --shadow-2: 0 12px 32px -12px rgba(60, 52, 137, 0.2), 0 2px 6px rgba(29, 24, 38, 0.05);
+
+  /* Rhythm */
+  --nav-h: 62px;
+  --page-max: 1120px;
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* Dark theme. index.html sets data-theme before the page draws (from the
+   saved choice, else the computer's setting), so there is no white flash.
+   Every text colour here keeps at least 4.5:1 contrast on the surfaces. */
+:root[data-theme="dark"] {
+  --purple: #b2abf7;
+  --purple-deep: #d4cfff;
+  --purple-soft: #9d95ee;
+  --purple-wash: #27223f;
+  --purple-line: #3d3764;
+
+  --green: #6fd0b2;
+  --green-soft: #8adbc2;
+  --green-wash: #13302a;
+  --green-line: #1f4a40;
+
+  --gold: #dcae62;
+  --gold-soft: #c9a060;
+  --gold-wash: #2e2517;
+  --gold-ink: #ecc98f;
+
+  --ink: #f0ecf6;
+  --ink-2: #cdc6d8;
+  --ink-3: #b0a8bc;
+  --ink-4: #9d94aa;
+  --canvas: #13111a;
+  --surface: #1c1926;
+  --surface-2: #24202f;
+  --hairline: #322c3f;
+  --hairline-strong: #463f55;
+  --shimmer: #2f2a3b;
+
+  --danger: #ff8fa3;
+  --danger-wash: #3a1a24;
+
+  --fill-purple: #4d44b0;
+  --fill-purple-deep: #5c53c4;
+  --fill-green: #0b6652;
+  --fill-ink: #342f42;
+  --on-fill: #ffffff;
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-2: 0 12px 32px -12px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.3);
+
+  color-scheme: dark;
+}
+
+/* Colours glide rather than snap when the theme changes. */
+.theme-anim,
+.theme-anim *,
+.theme-anim *::before,
+.theme-anim *::after {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, fill 0.25s ease !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--gold-wash);
+  color: var(--purple-deep);
+}
+
+/* Kannada-script text: larger optical size, looser leading so vowel signs
+   never collide with the line above. Applied wherever Tulu appears. */
+.kn {
+  font-family: var(--kannada);
+  line-height: 1.75;
+  font-feature-settings: "kern" 1;
+  word-break: break-word;
+}
+
+/* Kannada set in its serif cut, for wordmarks and page titles only. */
+.kn-display {
+  font-family: var(--kannada-display);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Tulu Lipi (Tulu-Tigalari, U+11380–U+113FF).
+
+   No operating system ships a font for this script and none is on Google
+   Fonts, so this rule looks first for a font the viewer has installed, then
+   for one dropped into public/fonts/ (see the README there). If neither is
+   present the Learn page detects it and explains, rather than showing boxes.
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Tulu Lipi";
+  src:
+    local("Noto Sans Tulu Tigalari"),
+    local("Noto Serif Tulu Tigalari"),
+    local("Tulu Tigalari"),
+    local("Tigalari"),
+    url("/fonts/TuluTigalari.woff2") format("woff2"),
+    url("/fonts/TuluTigalari.ttf") format("truetype");
+  font-display: swap;
+}
+
+.lipi {
+  font-family: "Tulu Lipi", var(--kannada-display), serif;
+  line-height: 1.5;
+}
+
+/* ---------- Layout primitives ---------- */
+
+.app {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1;
+  width: 100%;
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+.page--flush {
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 32px 18px 72px;
+  }
+}
+
+/* ---------- Page headers ---------- */
+
+.page-head {
+  max-width: 620px;
+  margin-bottom: 36px;
+}
+
+.page-head h1 {
+  font-family: var(--display);
+  font-size: clamp(30px, 4.8vw, 44px);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  line-height: 1.15;
+}
+
+.page-head p {
+  margin-top: 12px;
+  color: var(--ink-3);
+  font-size: 15.5px;
+  max-width: 56ch;
+}
+
+/* A kolam rule: dots and a hairline, the way a threshold pattern is drawn. */
+.page-head::after {
+  content: "";
+  display: block;
+  height: 7px;
+  margin-top: 18px;
+  max-width: 190px;
+  background-image: radial-gradient(circle, var(--gold-soft) 1.4px, transparent 1.5px),
+    linear-gradient(var(--hairline-strong), var(--hairline-strong));
+  background-size: 13px 7px, 100% 1px;
+  background-position: left center, left center;
+  background-repeat: repeat-x, no-repeat;
+  opacity: 0.9;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 20px;
+  border-radius: var(--r-md);
+  font-size: 14.5px;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+  transition: background 0.18s var(--ease), transform 0.12s var(--ease),
+    box-shadow 0.18s var(--ease), border-color 0.18s var(--ease), color 0.18s var(--ease);
+  white-space: nowrap;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px) scale(0.995);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn--primary {
+  background: var(--fill-purple);
+  color: var(--on-fill);
+  box-shadow: 0 1px 2px rgba(42, 36, 100, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: var(--fill-purple-deep);
+}
+
+.btn--ghost {
+  background: var(--surface);
+  color: var(--ink-2);
+  border: 1px solid var(--hairline-strong);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  border-color: var(--purple-line);
+  color: var(--purple);
+  background: var(--purple-wash);
+}
+
+.btn--quiet {
+  height: 34px;
+  padding: 0 12px;
+  color: var(--ink-3);
+  border-radius: var(--r-sm);
+}
+
+.btn--quiet:hover:not(:disabled) {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+/* ---------- Fields ---------- */
+
+.field {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  transition: border-color 0.18s var(--ease), box-shadow 0.18s var(--ease);
+}
+
+.field:focus {
+  outline: none;
+  border-color: var(--purple-soft);
+  box-shadow: 0 0 0 3px var(--purple-wash);
+}
+
+.field::placeholder {
+  color: var(--ink-4);
+}
+
+/* ---------- Small shared pieces ---------- */
+
+.hint {
+  color: var(--ink-3);
+  font-size: 13px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--hairline);
+  border: 0;
+}
+
+.notice {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  font-size: 14px;
+  background: var(--danger-wash);
+  color: var(--danger);
+  border: 1px solid color-mix(in srgb, var(--danger) 22%, transparent);
+}
+
+.notice svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+/* Skeleton shimmer used by every loading surface */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--surface-2) 0%,
+    var(--shimmer) 40%,
+    var(--surface-2) 80%
+  );
+  background-size: 300% 100%;
+  animation: shimmer 1.4s linear infinite;
+  border-radius: var(--r-sm);
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -300% 0;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
