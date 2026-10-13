@@ -38,6 +38,7 @@ from modules.audio_utils import AudioError, ffmpeg_available, to_wav
 from modules.concept_teaching import Teacher
 from modules.conversation import Conversation
 from modules import admin_content
+from modules import auth
 from modules.dictionary import TuluDictionary
 from modules.feedback import TRAINING_FILE, Feedback
 from modules.store import BACKUP_DIR, backups
@@ -59,6 +60,7 @@ def create_app():
     app.config["MAX_CONTENT_LENGTH"] = config.MAX_UPLOAD_MB * 1024 * 1024
     app.json.ensure_ascii = False  # send Kannada script as-is, not \\u escapes
     CORS(app, origins=config.ALLOWED_ORIGINS)
+    auth.register(app)
 
     started = time.time()
     feedback = Feedback()
