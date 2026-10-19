@@ -84,13 +84,18 @@ def _messages(user_text, history):
     return messages
 
 
+def _reasoning_model(model: str) -> bool:
+    # These models spend part of the token budget thinking before they answer.
+    name = (model or "").lower()
+    return name.startswith(("gpt-6", "gpt-5", "o1", "o3", "o4"))
+
+
 def _ask_openai(messages, system, max_tokens):
     model = config.LLM_MODEL
-    reasoning = model.startswith(("gpt-5", "o1", "o3", "o4"))
+    reasoning = _reasoning_model(model)
     kwargs = {
         "model": model,
         "messages": [{"role": "system", "content": system}, *messages],
-        # Reasoning models spend part of the budget thinking, so give them room.
         "max_completion_tokens": max_tokens * 4 if reasoning else max_tokens,
     }
     if reasoning:

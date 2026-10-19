@@ -72,7 +72,7 @@ for _d in (AUDIO_DIR, VOICES_DIR, UPLOADS_DIR):
 # Either provider works — set ONE key:
 #   OPENAI_API_KEY=sk-...        (OpenAI; model: OPENAI_MODEL, default gpt-5-mini)
 #   ANTHROPIC_API_KEY=sk-ant-... (Claude; model: LLM_MODEL, default claude-sonnet-5)
-# With both set, LLM_PROVIDER=openai or anthropic picks one (default: anthropic).
+# With both set, LLM_PROVIDER=openai or anthropic picks one (default: openai).
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "").strip()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5-mini")
@@ -84,7 +84,7 @@ def _provider():
         return "openai" if OPENAI_API_KEY else None
     if wanted == "anthropic":
         return "anthropic" if ANTHROPIC_API_KEY else None
-    return "anthropic" if ANTHROPIC_API_KEY else "openai" if OPENAI_API_KEY else None
+    return "openai" if OPENAI_API_KEY else "anthropic" if ANTHROPIC_API_KEY else None
 
 
 LLM_PROVIDER = _provider()

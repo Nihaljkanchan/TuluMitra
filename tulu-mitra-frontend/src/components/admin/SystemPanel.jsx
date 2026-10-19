@@ -75,7 +75,15 @@ export default function SystemPanel() {
             value={!vc.enabled ? "off (VOICE_CONVERSION=off)" : vc.error ? `error: ${vc.error}` : vc.state}
             ok={vc.enabled ? vc.state === "ready" : undefined}
           />
-          <Row label="Claude (open questions)" value={o.llm ? "on" : "off"} ok={o.llm || undefined} />
+          <Row
+            label="Language model (open questions)"
+            value={
+              (typeof o.llm === "object" ? o.llm.enabled : o.llm)
+                ? `${o.llm.provider || "on"}${o.llm.model ? ` · ${o.llm.model}` : ""}`
+                : "off"
+            }
+            ok={(typeof o.llm === "object" ? o.llm.enabled : o.llm) || undefined}
+          />
           <Row label="Training export" value={o.training_file} />
         </div>
       )}

@@ -73,6 +73,7 @@ def create_app():
     voices = VoiceStore()
     asr = ASR()
     tts = TTS(voices)
+    tts.warmup()
 
     # ------------------------------------------------------------ helpers
     def body():
@@ -306,7 +307,11 @@ def create_app():
             "tts": tts.status(),
             "asr": asr.status(),
             "voice_conversion": voices.status(),
-            "llm": llm.available(),
+            "llm": {
+                "enabled": llm.available(),
+                "provider": llm.provider(),
+                "model": config.LLM_MODEL if llm.available() else None,
+            },
             "training_file": (str(TRAINING_FILE.relative_to(config.BASE_DIR)) if TRAINING_FILE.is_relative_to(config.BASE_DIR)
                               else str(TRAINING_FILE)),
         })
@@ -425,7 +430,8 @@ def create_app():
         return jsonify({"error": "Something went wrong on the server"}), 500
 
     log.info("Tulu Mitra API ready — LLM %s, ASR %s, TTS %s",
-             "on" if llm.available() else "off", asr.status()["state"], tts.status()["state"])
+             f"{llm.provider()}:{config.LLM_MODEL}" if llm.available() else "off",
+             asr.status()["state"], tts.status()["state"])
     return app
 
 

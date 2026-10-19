@@ -5,7 +5,7 @@ Conversation — turns one user message into one Tulu Mitra reply.
 
 Flow: detect intent → answer from the project's own data where possible
 (greetings, translations, meanings, numbers, lessons, quizzes, Tulu Lipi)
-→ otherwise ask Claude if configured → otherwise say plainly that the
+→ otherwise ask the language model if configured → otherwise say plainly that the
 answer isn't known. Nothing here invents Tulu.
 
 The reply dict matches what the frontend renders:
@@ -126,10 +126,20 @@ class Conversation:
             if r:
                 return r
 
-        if re.search(r"(who are you|your name|introduce yourself|ನಿಮ್ಮ ಹೆಸರೇನು)", t):
+        if re.search(r"(who are you|your name|introduce yourself|ನಿಮ್ಮ ಹೆಸರೇನು|ninna pudar|eerna pudar|pudar da?da|ನಿನ್ನ ಪುದರ್|ಈರೆನ ಪುದರ್)", t):
             return tulu("ಎನ್ನ ಪುದರ್ ತುಳು ಮಿತ್ರ.", "enna pudar Tulu Mitra.", "My name is Tulu Mitra.",
                         blocks=[{"type": "text", "text": "*Mitra* means friend — I help you speak, learn and translate Tulu."}],
                         suggestions=["What can you do?", "Who made you?", "My name is Abhishek"], intent="Greetings")
+
+        if re.search(r"(what model|which model|what llm|which llm|ಯಾವ ಮಾಡೆಲ್)", t):
+            m = config.LLM_MODEL or "gpt-6-luna"
+            return eng(f"I am powered by OpenAI's **{m}** model for open conversation, together with my built-in Tulu dictionary, grammar rules, and speech models.",
+                       suggestions=["What can you do?", "Teach me greetings", "Quiz me"], intent="About the project")
+
+        if re.search(r"\b(onas|vanas|oota)\s*(aanda|aayitha|aatha|\?|$)", t):
+            return tulu("ವನಸ್ ಆಂಡ್! ಈರೆನ ವನಸ್ ಆಂಡಾ?", "vanas aand! erena vanas aanda?", "Yes, had food! Did you have your meal?",
+                        blocks=[{"type": "text", "text": "**ವನಸ್ ಆಂಡ್** (vanas aand) is the standard Tulu response for 'I had my meal'."}],
+                        suggestions=["ಆಂಡ್ (Yes)", "ಆತಿಜಿ (Not yet)", "Teach me food words"], intent="Chat")
         if re.search(r"\btulu\b|ತುಳು|yakshagana|kambala|bhuta kola", t):
             for pattern, answer in FACTS.values():
                 if re.search(pattern, t):

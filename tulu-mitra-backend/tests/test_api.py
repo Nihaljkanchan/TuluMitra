@@ -378,10 +378,11 @@ def test_openai_provider(monkeypatch):
 
     monkeypatch.setattr(config, "LLM_PROVIDER", "openai")
     monkeypatch.setattr(config, "LLM_ENABLED", True)
-    monkeypatch.setattr(config, "LLM_MODEL", "gpt-5-mini")
+    monkeypatch.setattr(config, "LLM_MODEL", "gpt-6-luna")
     monkeypatch.setattr(llm, "_client", Fake)
     data = llm.ask_json("why is the sky blue?", history=[{"role": "assistant", "text": "hi"}, {"role": "user", "text": "hello"}])
     assert data["tulu"] == "ಎಡ್ಡೆ"
-    assert sent["model"] == "gpt-5-mini" and sent["messages"][0]["role"] == "system"
+    assert sent["model"] == "gpt-6-luna" and sent["messages"][0]["role"] == "system"
     assert sent["messages"][-1]["role"] == "user" and "sky" in sent["messages"][-1]["content"]
     assert sent["reasoning_effort"] == "low" and "max_tokens" not in sent
+    assert sent["max_completion_tokens"] == 700 * 4
