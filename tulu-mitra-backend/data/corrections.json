@@ -14,5 +14,37 @@
     "roman": "yaan ushar ulle",
     "english": "I am well.",
     "approved": 1790748058
+  },
+  {
+    "id": "c6546cc07c9d",
+    "report": "e86a6aba4a6f",
+    "kind": "dictionary",
+    "input": "45",
+    "direction": "",
+    "wrong": {
+      "tulu": "ನಲ್ಪ ಐನ್",
+      "roman": "nalpaain",
+      "english": "45 — forty five"
+    },
+    "tulu": "ನ",
+    "roman": "nalpaain",
+    "english": "45 — forty five",
+    "approved": 1792660483
+  },
+  {
+    "id": "40600379c612",
+    "report": "80c76101411c",
+    "kind": "dictionary",
+    "input": "bus",
+    "direction": "",
+    "wrong": {
+      "tulu": "",
+      "roman": "",
+      "english": "bus"
+    },
+    "tulu": "ಬಸ್",
+    "roman": "bus",
+    "english": "bus",
+    "approved": 1792660758
   }
 ]
