@@ -142,11 +142,12 @@ def create_app():
     # ---------------------------------------------------------------- asr
     @app.post("/asr")
     def speech_to_text():
+        language = (request.form.get("language") or request.args.get("language") or "tulu").strip().lower()
         src = save_upload()
         wav = src.with_name(f"{src.stem}_16k.wav")  # never the same path as the upload
         try:
             to_wav(src, wav)
-            text = asr.transcribe(wav)
+            text = asr.transcribe(wav, language=language)
             return jsonify({"text": text, "fine_tuned": asr.adapter_loaded})
         except AudioError as exc:
             return jsonify({"error": str(exc)}), 400

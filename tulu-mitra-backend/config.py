@@ -92,7 +92,9 @@ LLM_MODEL = OPENAI_MODEL if LLM_PROVIDER == "openai" else os.getenv("LLM_MODEL",
 LLM_ENABLED = LLM_PROVIDER is not None and _bool("LLM_ENABLED", True)
 
 # --- Speech recognition (Whisper) -------------------------------------------
-# "auto": load Whisper if torch/transformers are installed; "off": never.
+# "auto": use OpenAI Whisper API if OPENAI_API_KEY is set, else local Whisper;
+# "openai": force OpenAI Whisper API; "local": force local HuggingFace Whisper; "off": never.
+ASR_PROVIDER = os.getenv("ASR_PROVIDER", "auto").strip().lower()
 ASR_MODE = os.getenv("ASR_MODE", "auto").lower()
 WHISPER_BASE_MODEL = os.getenv("WHISPER_BASE_MODEL", "openai/whisper-small")
 # Where training/train_whisper_lora.py saves its LoRA adapter. If this folder

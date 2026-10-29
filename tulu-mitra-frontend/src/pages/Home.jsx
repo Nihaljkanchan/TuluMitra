@@ -177,7 +177,7 @@ export default function Home() {
       setPhase("thinking");
       setSkipTyping(false);
       try {
-        const r = await chat(text, language, { memory, history });
+        const r = await chat(text, language, { memory, history, with_audio: speakAfter });
         if (token !== reqRef.current) return; // stopped or switched chats
         const { memory: nextMemory, ...content } = r;
         const msg = {

@@ -107,6 +107,7 @@ export async function chat(text, language = "tulu", context = {}) {
       history: context.history ?? [],
       memory: context.memory ?? {},
       voice_id: savedVoiceId(),
+      with_audio: Boolean(context.with_audio),
     },
   });
   return {
