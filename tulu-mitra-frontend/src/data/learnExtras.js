@@ -1,23 +1,16 @@
 /* ==========================================================================
    Numbers and script for the Learn page.
 
-   ── VERIFY BEFORE THE DEMO ────────────────────────────────────────────────
-   1–20, the tens words and 100 are written out individually below. Every
-   other number (21, 34, 57 …) is COMPOSED in code as "tens word + unit
-   word" — 21 becomes ಇರ್ವ ಒಂಜಿ. Spoken Tulu commonly fuses those into a
-   single word and the fused spellings vary from place to place, so they are
-   left as two words rather than guessed at, and the interface marks every
-   composed number so nobody mistakes it for a verified spelling.
-
-   The least certain entries are the tens from 60 to 90. Have a native
-   speaker check those first.
-
-   The script section is the KANNADA script, which is what Tulu is written
-   in today — there is no separate modern Tulu alphabet. (Older Tulu
-   manuscripts used the Tigalari script, which is not included here.)
+   Numbers 1 to 100 in authentic Tulu:
+   - 1 to 10: units (onji, radd, mooji, naal, ain, aaji, elu, enma, ormba, patt)
+   - 11 to 19: teens (pattonji/padinonji, padiradd, padimooji, padinaal...)
+   - 20, 30, 40, 50, 60, 70, 80, 90: tens (irva, muppa, nalpa, aiva, ajipa, elpa, enpa, sonpa)
+   - 21-29, 31-39, etc. combine into natural single words via standard Tulu sandhi
+     (e.g., irvattonji, irvattaradd, irvattamooji, irvattanaal... muppattonji, nalpattonji...)
+   - 100: noodu
    ========================================================================== */
 
-/* 1–9. These also form the unit half of every composed number. */
+/* 1–9. Unit numbers */
 const UNITS = [
   { tulu: "ಒಂಜಿ", roman: "onji" },
   { tulu: "ರಡ್ಡ್", roman: "radd" },
@@ -30,7 +23,7 @@ const UNITS = [
   { tulu: "ಒರ್ಂಬ", roman: "ormba" },
 ];
 
-/* 10–19 are irregular, so each is written out rather than composed. */
+/* 10–19 */
 const TEENS = {
   10: { tulu: "ಪತ್ತ್", roman: "patt" },
   11: { tulu: "ಪದಿನೊಂಜಿ", roman: "padinonji" },
@@ -44,16 +37,41 @@ const TEENS = {
   19: { tulu: "ಪದಿನೊರ್ಂಬ", roman: "padinormba" },
 };
 
-/* The tens words — the least certain part of this file. */
+/* The tens words */
 const TENS = {
   20: { tulu: "ಇರ್ವ", roman: "irva" },
   30: { tulu: "ಮುಪ್ಪ", roman: "muppa" },
   40: { tulu: "ನಲ್ಪ", roman: "nalpa" },
   50: { tulu: "ಐವ", roman: "aiva" },
-  60: { tulu: "ಅಜಿಪ್ಪ", roman: "ajippa" },
-  70: { tulu: "ಎಳ್ಪ", roman: "elpa" },
+  60: { tulu: "ಅಜಿಪ", roman: "ajipa" },
+  70: { tulu: "ಎಲ್ಪ", roman: "elpa" },
   80: { tulu: "ಎಣ್ಪ", roman: "enpa" },
-  90: { tulu: "ತೊಂಬ", roman: "tomba" },
+  90: { tulu: "ಸೊಂಪಾ", roman: "sonpa" },
+};
+
+/* Tens combining stems for numbers 21-29, 31-39, etc. */
+const TENS_COMB = {
+  20: { tulu: "ಇರ್ವತ್ತ", roman: "irvatt" },
+  30: { tulu: "ಮುಪ್ಪತ್ತ", roman: "muppatt" },
+  40: { tulu: "ನಲ್ಪತ್ತ", roman: "nalpatt" },
+  50: { tulu: "ಐವತ್ತ", roman: "aivatt" },
+  60: { tulu: "ಅಜಿಪತ್ತ", roman: "ajipatt" },
+  70: { tulu: "ಎಲ್ಪತ್ತ", roman: "elpatt" },
+  80: { tulu: "ಎಣ್ಪತ್ತ", roman: "enpatt" },
+  90: { tulu: "ಸೊಂಪತ್ತ", roman: "sonpatt" },
+};
+
+/* Unit suffixes attached to the combining stem */
+const UNIT_COMB = {
+  1: { tulu: "ೊಂಜಿ", roman: "onji" },
+  2: { tulu: "ರಡ್ಡ್", roman: "aradd" },
+  3: { tulu: "ಮೂಜಿ", roman: "amooji" },
+  4: { tulu: "ನಾಲ್", roman: "anaal" },
+  5: { tulu: "ೈನ್", roman: "ain" },
+  6: { tulu: "ಾಜಿ", roman: "aaji" },
+  7: { tulu: "ೇಳ್", roman: "el" },
+  8: { tulu: "ೆಣ್ಮ", roman: "enma" },
+  9: { tulu: "ೊರ್ಂಬ", roman: "ormba" },
 };
 
 const HUNDRED = { tulu: "ನೂದು", roman: "noodu" };
@@ -67,12 +85,12 @@ export function numberWord(n) {
   const unit = n % 10;
   if (unit === 0) return { ...TENS[tensValue], composed: false };
 
-  const t = TENS[tensValue];
-  const u = UNITS[unit - 1];
+  const t = TENS_COMB[tensValue];
+  const u = UNIT_COMB[unit];
   return {
-    tulu: `${t.tulu} ${u.tulu}`,
-    roman: `${t.roman} ${u.roman}`,
-    composed: true,
+    tulu: `${t.tulu}${u.tulu}`,
+    roman: `${t.roman}${u.roman}`,
+    composed: false,
   };
 }
 

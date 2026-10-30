@@ -217,6 +217,10 @@ a {
 @font-face {
   font-family: "Tulu Lipi";
   src:
+    local("Mallige_unicode Regular"),
+    local("Mallige_unicode"),
+    local("Mallige Unicode"),
+    local("Mallige"),
     local("Noto Sans Tulu Tigalari"),
     local("Noto Serif Tulu Tigalari"),
     local("Tulu Tigalari"),

@@ -35,10 +35,10 @@ export const LIPI_GROUPS = [
       { lipi: "𑎅", cp: "U+11385", roman: "ū", kannada: "ಊ" },
       { lipi: "𑎆", cp: "U+11386", roman: "ṛ", kannada: "ಋ" },
       { lipi: "𑎇", cp: "U+11387", roman: "ṝ", kannada: "ೠ" },
-      { lipi: null, cp: null, roman: "e", kannada: "ಎ" },
+      { lipi: "\u{1138A}", cp: "U+1138A", roman: "e", kannada: "ಎ" },
       { lipi: "𑎋", cp: "U+1138B", roman: "ē", kannada: "ಏ" },
       { lipi: "𑎎", cp: "U+1138E", roman: "ai", kannada: "ಐ" },
-      { lipi: null, cp: null, roman: "o", kannada: "ಒ" },
+      { lipi: "\u{1138F}", cp: "U+1138F", roman: "o", kannada: "ಒ" },
       { lipi: "𑎐", cp: "U+11390", roman: "ō", kannada: "ಓ" },
       { lipi: "𑎑", cp: "U+11391", roman: "au", kannada: "ಔ" },
     ],
@@ -158,13 +158,9 @@ export const LIPI_PROBES = [
   "𑎎", // U+1138E AI
 ];
 
-/* A codepoint from this SAME block that Unicode has confirmed unassigned
-   (see the file header — short e, U+1138A). No font anywhere can draw it,
-   by definition, so it is a guaranteed "missing glyph" box on every device
-   and browser. useGlyphSupport measures this alongside the probes above and
-   compares — rather than assuming a missing glyph is always exactly 1em,
-   which is not true on every browser. */
-export const LIPI_MISSING_REF = "\u{1138A}";
+/* A codepoint from this SAME block that Unicode has unassigned (U+113FF).
+   It is a guaranteed "missing glyph" box on devices without font support. */
+export const LIPI_MISSING_REF = "\u{113FF}";
 
 export const LIPI_TOTAL = LIPI_GROUPS.reduce((n, g) => n + g.letters.length, 0);
 

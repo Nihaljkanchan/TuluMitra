@@ -800,128 +800,146 @@
       "phrasebook": false
     },
     {
-      "tulu": "ಇರ್ವ ಒಂಜಿ",
-      "roman": "irva onji",
+      "tulu": "ಇರ್ವತ್ತೊಂಜಿ",
+      "roman": "irvattonji",
       "english": "21",
       "english_alts": [
         "21",
         "twenty one"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಇಪ್ಪತ್ತೊಂದು"
+      ],
       "number": 21,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಇರ್ವ ರಡ್ಡ್",
-      "roman": "irva radd",
+      "tulu": "ಇರ್ವತ್ತರಡ್ಡ್",
+      "roman": "irvattaradd",
       "english": "22",
       "english_alts": [
         "22",
         "twenty two"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಇಪ್ಪತ್ತೆರಡು"
+      ],
       "number": 22,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಇರ್ವ ಮೂಜಿ",
-      "roman": "irva mooji",
+      "tulu": "ಇರ್ವತ್ತಮೂಜಿ",
+      "roman": "irvattamooji",
       "english": "23",
       "english_alts": [
         "23",
         "twenty three"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಇಪ್ಪತ್ಮೂರು"
+      ],
       "number": 23,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಇರ್ವ ನಾಲ್",
-      "roman": "irva naal",
+      "tulu": "ಇರ್ವತ್ತನಾಲ್",
+      "roman": "irvattanaal",
       "english": "24",
       "english_alts": [
         "24",
         "twenty four"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಇಪ್ಪತ್ನಾಲ್ಕು"
+      ],
       "number": 24,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಇರ್ವ ಐನ್",
-      "roman": "irva ain",
+      "tulu": "ಇರ್ವತ್ತೈನ್",
+      "roman": "irvattain",
       "english": "25",
       "english_alts": [
         "25",
         "twenty five"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಇಪ್ಪತ್ತೈದು"
+      ],
       "number": 25,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಇರ್ವ ಆಜಿ",
-      "roman": "irva aaji",
+      "tulu": "ಇರ್ವತ್ತಾಜಿ",
+      "roman": "irvattaaji",
       "english": "26",
       "english_alts": [
         "26",
         "twenty six"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಇಪ್ಪತ್ತಾರು"
+      ],
       "number": 26,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಇರ್ವ ಏಳ್",
-      "roman": "irva elu",
+      "tulu": "ಇರ್ವತ್ತೇಳ್",
+      "roman": "irvattel",
       "english": "27",
       "english_alts": [
         "27",
         "twenty seven"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಇಪ್ಪತ್ತೇಳು"
+      ],
       "number": 27,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಇರ್ವ ಎಣ್ಮ",
-      "roman": "irva enma",
+      "tulu": "ಇರ್ವತ್ತೆಣ್ಮ",
+      "roman": "irvattenma",
       "english": "28",
       "english_alts": [
         "28",
         "twenty eight"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಇಪ್ಪತ್ತೆಂಟು"
+      ],
       "number": 28,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಇರ್ವ ಒರ್ಂಬ",
-      "roman": "irva ormba",
+      "tulu": "ಇರ್ವತ್ತೊರ್ಂಬ",
+      "roman": "irvattormba",
       "english": "29",
       "english_alts": [
         "29",
         "twenty nine"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಇಪ್ಪತ್ತೊಂಬತ್ತು"
+      ],
       "number": 29,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
@@ -942,128 +960,146 @@
       "phrasebook": false
     },
     {
-      "tulu": "ಮುಪ್ಪ ಒಂಜಿ",
-      "roman": "muppa onji",
+      "tulu": "ಮುಪ್ಪತ್ತೊಂಜಿ",
+      "roman": "muppattonji",
       "english": "31",
       "english_alts": [
         "31",
         "thirty one"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಮೂವತ್ತೊಂದು"
+      ],
       "number": 31,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಮುಪ್ಪ ರಡ್ಡ್",
-      "roman": "muppa radd",
+      "tulu": "ಮುಪ್ಪತ್ತರಡ್ಡ್",
+      "roman": "muppattaradd",
       "english": "32",
       "english_alts": [
         "32",
         "thirty two"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಮೂವತ್ತೆರಡು"
+      ],
       "number": 32,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಮುಪ್ಪ ಮೂಜಿ",
-      "roman": "muppa mooji",
+      "tulu": "ಮುಪ್ಪತ್ತಮೂಜಿ",
+      "roman": "muppattamooji",
       "english": "33",
       "english_alts": [
         "33",
         "thirty three"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಮೂವತ್ಮೂರು"
+      ],
       "number": 33,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಮುಪ್ಪ ನಾಲ್",
-      "roman": "muppa naal",
+      "tulu": "ಮುಪ್ಪತ್ತನಾಲ್",
+      "roman": "muppattanaal",
       "english": "34",
       "english_alts": [
         "34",
         "thirty four"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಮೂವತ್ನಾಲ್ಕು"
+      ],
       "number": 34,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಮುಪ್ಪ ಐನ್",
-      "roman": "muppa ain",
+      "tulu": "ಮುಪ್ಪತ್ತೈನ್",
+      "roman": "muppattain",
       "english": "35",
       "english_alts": [
         "35",
         "thirty five"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಮೂವತ್ತೈದು"
+      ],
       "number": 35,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಮುಪ್ಪ ಆಜಿ",
-      "roman": "muppa aaji",
+      "tulu": "ಮುಪ್ಪತ್ತಾಜಿ",
+      "roman": "muppattaaji",
       "english": "36",
       "english_alts": [
         "36",
         "thirty six"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಮೂವತ್ತಾರು"
+      ],
       "number": 36,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಮುಪ್ಪ ಏಳ್",
-      "roman": "muppa elu",
+      "tulu": "ಮುಪ್ಪತ್ತೇಳ್",
+      "roman": "muppattel",
       "english": "37",
       "english_alts": [
         "37",
         "thirty seven"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಮೂವತ್ತೇಳು"
+      ],
       "number": 37,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಮುಪ್ಪ ಎಣ್ಮ",
-      "roman": "muppa enma",
+      "tulu": "ಮುಪ್ಪತ್ತೆಣ್ಮ",
+      "roman": "muppattenma",
       "english": "38",
       "english_alts": [
         "38",
         "thirty eight"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಮೂವತ್ತೆಂಟು"
+      ],
       "number": 38,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಮುಪ್ಪ ಒರ್ಂಬ",
-      "roman": "muppa ormba",
+      "tulu": "ಮುಪ್ಪತ್ತೊರ್ಂಬ",
+      "roman": "muppattormba",
       "english": "39",
       "english_alts": [
         "39",
         "thirty nine"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಮೂವತ್ತೊಂಬತ್ತು"
+      ],
       "number": 39,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
@@ -1084,128 +1120,146 @@
       "phrasebook": false
     },
     {
-      "tulu": "ನಲ್ಪ ಒಂಜಿ",
-      "roman": "nalpa onji",
+      "tulu": "ನಲ್ಪತ್ತೊಂಜಿ",
+      "roman": "nalpattonji",
       "english": "41",
       "english_alts": [
         "41",
         "forty one"
       ],
-      "kannada": [],
+      "kannada": [
+        "ನಲವತ್ತೊಂದು"
+      ],
       "number": 41,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ನಲ್ಪ ರಡ್ಡ್",
-      "roman": "nalpa radd",
+      "tulu": "ನಲ್ಪತ್ತರಡ್ಡ್",
+      "roman": "nalpattaradd",
       "english": "42",
       "english_alts": [
         "42",
         "forty two"
       ],
-      "kannada": [],
+      "kannada": [
+        "ನಲವತ್ತೆರಡು"
+      ],
       "number": 42,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ನಲ್ಪ ಮೂಜಿ",
-      "roman": "nalpa mooji",
+      "tulu": "ನಲ್ಪತ್ತಮೂಜಿ",
+      "roman": "nalpattamooji",
       "english": "43",
       "english_alts": [
         "43",
         "forty three"
       ],
-      "kannada": [],
+      "kannada": [
+        "ನಲವತ್ಮೂರು"
+      ],
       "number": 43,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ನಲ್ಪ ನಾಲ್",
-      "roman": "nalpa naal",
+      "tulu": "ನಲ್ಪತ್ತನಾಲ್",
+      "roman": "nalpattanaal",
       "english": "44",
       "english_alts": [
         "44",
         "forty four"
       ],
-      "kannada": [],
+      "kannada": [
+        "ನಲವತ್ನಾಲ್ಕು"
+      ],
       "number": 44,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ನಲ್ಪ ಐನ್",
-      "roman": "nalpa ain",
+      "tulu": "ನಲ್ಪತ್ತೈನ್",
+      "roman": "nalpattain",
       "english": "45",
       "english_alts": [
         "45",
         "forty five"
       ],
-      "kannada": [],
+      "kannada": [
+        "ನಲವತ್ತೈದು"
+      ],
       "number": 45,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ನಲ್ಪ ಆಜಿ",
-      "roman": "nalpa aaji",
+      "tulu": "ನಲ್ಪತ್ತಾಜಿ",
+      "roman": "nalpattaaji",
       "english": "46",
       "english_alts": [
         "46",
         "forty six"
       ],
-      "kannada": [],
+      "kannada": [
+        "ನಲವತ್ತಾರು"
+      ],
       "number": 46,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ನಲ್ಪ ಏಳ್",
-      "roman": "nalpa elu",
+      "tulu": "ನಲ್ಪತ್ತೇಳ್",
+      "roman": "nalpattel",
       "english": "47",
       "english_alts": [
         "47",
         "forty seven"
       ],
-      "kannada": [],
+      "kannada": [
+        "ನಲವತ್ತೇಳು"
+      ],
       "number": 47,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ನಲ್ಪ ಎಣ್ಮ",
-      "roman": "nalpa enma",
+      "tulu": "ನಲ್ಪತ್ತೆಣ್ಮ",
+      "roman": "nalpattenma",
       "english": "48",
       "english_alts": [
         "48",
         "forty eight"
       ],
-      "kannada": [],
+      "kannada": [
+        "ನಲವತ್ತೆಂಟು"
+      ],
       "number": 48,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ನಲ್ಪ ಒರ್ಂಬ",
-      "roman": "nalpa ormba",
+      "tulu": "ನಲ್ಪತ್ತೊರ್ಂಬ",
+      "roman": "nalpattormba",
       "english": "49",
       "english_alts": [
         "49",
         "forty nine"
       ],
-      "kannada": [],
+      "kannada": [
+        "ನಲವತ್ತೊಂಬತ್ತು"
+      ],
       "number": 49,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
@@ -1226,134 +1280,152 @@
       "phrasebook": false
     },
     {
-      "tulu": "ಐವ ಒಂಜಿ",
-      "roman": "aiva onji",
+      "tulu": "ಐವತ್ತೊಂಜಿ",
+      "roman": "aivattonji",
       "english": "51",
       "english_alts": [
         "51",
         "fifty one"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಐವತ್ತೊಂದು"
+      ],
       "number": 51,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಐವ ರಡ್ಡ್",
-      "roman": "aiva radd",
+      "tulu": "ಐವತ್ತರಡ್ಡ್",
+      "roman": "aivattaradd",
       "english": "52",
       "english_alts": [
         "52",
         "fifty two"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಐವತ್ತೆರಡು"
+      ],
       "number": 52,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಐವ ಮೂಜಿ",
-      "roman": "aiva mooji",
+      "tulu": "ಐವತ್ತಮೂಜಿ",
+      "roman": "aivattamooji",
       "english": "53",
       "english_alts": [
         "53",
         "fifty three"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಐವತ್ಮೂರು"
+      ],
       "number": 53,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಐವ ನಾಲ್",
-      "roman": "aiva naal",
+      "tulu": "ಐವತ್ತನಾಲ್",
+      "roman": "aivattanaal",
       "english": "54",
       "english_alts": [
         "54",
         "fifty four"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಐವತ್ನಾಲ್ಕು"
+      ],
       "number": 54,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಐವ ಐನ್",
-      "roman": "aiva ain",
+      "tulu": "ಐವತ್ತೈನ್",
+      "roman": "aivattain",
       "english": "55",
       "english_alts": [
         "55",
         "fifty five"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಐವತ್ತೈದು"
+      ],
       "number": 55,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಐವ ಆಜಿ",
-      "roman": "aiva aaji",
+      "tulu": "ಐವತ್ತಾಜಿ",
+      "roman": "aivattaaji",
       "english": "56",
       "english_alts": [
         "56",
         "fifty six"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಐವತ್ತಾರು"
+      ],
       "number": 56,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಐವ ಏಳ್",
-      "roman": "aiva elu",
+      "tulu": "ಐವತ್ತೇಳ್",
+      "roman": "aivattel",
       "english": "57",
       "english_alts": [
         "57",
         "fifty seven"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಐವತ್ತೇಳು"
+      ],
       "number": 57,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಐವ ಎಣ್ಮ",
-      "roman": "aiva enma",
+      "tulu": "ಐವತ್ತೆಣ್ಮ",
+      "roman": "aivattenma",
       "english": "58",
       "english_alts": [
         "58",
         "fifty eight"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಐವತ್ತೆಂಟು"
+      ],
       "number": 58,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಐವ ಒರ್ಂಬ",
-      "roman": "aiva ormba",
+      "tulu": "ಐವತ್ತೊರ್ಂಬ",
+      "roman": "aivattormba",
       "english": "59",
       "english_alts": [
         "59",
         "fifty nine"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಐವತ್ತೊಂಬತ್ತು"
+      ],
       "number": 59,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಅಜಿಪ್ಪ",
-      "roman": "ajippa",
+      "tulu": "ಅಜಿಪ",
+      "roman": "ajipa",
       "english": "60",
       "english_alts": [
         "60",
@@ -1368,133 +1440,151 @@
       "phrasebook": false
     },
     {
-      "tulu": "ಅಜಿಪ್ಪ ಒಂಜಿ",
-      "roman": "ajippa onji",
+      "tulu": "ಅಜಿಪತ್ತೊಂಜಿ",
+      "roman": "ajipattonji",
       "english": "61",
       "english_alts": [
         "61",
         "sixty one"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಅರವತ್ತೊಂದು"
+      ],
       "number": 61,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಅಜಿಪ್ಪ ರಡ್ಡ್",
-      "roman": "ajippa radd",
+      "tulu": "ಅಜಿಪತ್ತರಡ್ಡ್",
+      "roman": "ajipattaradd",
       "english": "62",
       "english_alts": [
         "62",
         "sixty two"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಅರವತ್ತೆರಡು"
+      ],
       "number": 62,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಅಜಿಪ್ಪ ಮೂಜಿ",
-      "roman": "ajippa mooji",
+      "tulu": "ಅಜಿಪತ್ತಮೂಜಿ",
+      "roman": "ajipattamooji",
       "english": "63",
       "english_alts": [
         "63",
         "sixty three"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಅರವತ್ಮೂರು"
+      ],
       "number": 63,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಅಜಿಪ್ಪ ನಾಲ್",
-      "roman": "ajippa naal",
+      "tulu": "ಅಜಿಪತ್ತನಾಲ್",
+      "roman": "ajipattanaal",
       "english": "64",
       "english_alts": [
         "64",
         "sixty four"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಅರವತ್ನಾಲ್ಕು"
+      ],
       "number": 64,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಅಜಿಪ್ಪ ಐನ್",
-      "roman": "ajippa ain",
+      "tulu": "ಅಜಿಪತ್ತೈನ್",
+      "roman": "ajipattain",
       "english": "65",
       "english_alts": [
         "65",
         "sixty five"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಅರವತ್ತೈದು"
+      ],
       "number": 65,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಅಜಿಪ್ಪ ಆಜಿ",
-      "roman": "ajippa aaji",
+      "tulu": "ಅಜಿಪತ್ತಾಜಿ",
+      "roman": "ajipattaaji",
       "english": "66",
       "english_alts": [
         "66",
         "sixty six"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಅರವತ್ತಾರು"
+      ],
       "number": 66,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಅಜಿಪ್ಪ ಏಳ್",
-      "roman": "ajippa elu",
+      "tulu": "ಅಜಿಪತ್ತೇಳ್",
+      "roman": "ajipattel",
       "english": "67",
       "english_alts": [
         "67",
         "sixty seven"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಅರವತ್ತೇಳು"
+      ],
       "number": 67,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಅಜಿಪ್ಪ ಎಣ್ಮ",
-      "roman": "ajippa enma",
+      "tulu": "ಅಜಿಪತ್ತೆಣ್ಮ",
+      "roman": "ajipattenma",
       "english": "68",
       "english_alts": [
         "68",
         "sixty eight"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಅರವತ್ತೆಂಟು"
+      ],
       "number": 68,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಅಜಿಪ್ಪ ಒರ್ಂಬ",
-      "roman": "ajippa ormba",
+      "tulu": "ಅಜಿಪತ್ತೊರ್ಂಬ",
+      "roman": "ajipattormba",
       "english": "69",
       "english_alts": [
         "69",
         "sixty nine"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಅರವತ್ತೊಂಬತ್ತು"
+      ],
       "number": 69,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಳ್ಪ",
+      "tulu": "ಎಲ್ಪ",
       "roman": "elpa",
       "english": "70",
       "english_alts": [
@@ -1510,128 +1600,146 @@
       "phrasebook": false
     },
     {
-      "tulu": "ಎಳ್ಪ ಒಂಜಿ",
-      "roman": "elpa onji",
+      "tulu": "ಎಲ್ಪತ್ತೊಂಜಿ",
+      "roman": "elpattonji",
       "english": "71",
       "english_alts": [
         "71",
         "seventy one"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಪ್ಪತ್ತೊಂದು"
+      ],
       "number": 71,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಳ್ಪ ರಡ್ಡ್",
-      "roman": "elpa radd",
+      "tulu": "ಎಲ್ಪತ್ತರಡ್ಡ್",
+      "roman": "elpattaradd",
       "english": "72",
       "english_alts": [
         "72",
         "seventy two"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಪ್ಪತ್ತೆರಡು"
+      ],
       "number": 72,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಳ್ಪ ಮೂಜಿ",
-      "roman": "elpa mooji",
+      "tulu": "ಎಲ್ಪತ್ತಮೂಜಿ",
+      "roman": "elpattamooji",
       "english": "73",
       "english_alts": [
         "73",
         "seventy three"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಪ್ಪತ್ಮೂರು"
+      ],
       "number": 73,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಳ್ಪ ನಾಲ್",
-      "roman": "elpa naal",
+      "tulu": "ಎಲ್ಪತ್ತನಾಲ್",
+      "roman": "elpattanaal",
       "english": "74",
       "english_alts": [
         "74",
         "seventy four"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಪ್ಪತ್ನಾಲ್ಕು"
+      ],
       "number": 74,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಳ್ಪ ಐನ್",
-      "roman": "elpa ain",
+      "tulu": "ಎಲ್ಪತ್ತೈನ್",
+      "roman": "elpattain",
       "english": "75",
       "english_alts": [
         "75",
         "seventy five"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಪ್ಪತ್ತೈದು"
+      ],
       "number": 75,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಳ್ಪ ಆಜಿ",
-      "roman": "elpa aaji",
+      "tulu": "ಎಲ್ಪತ್ತಾಜಿ",
+      "roman": "elpattaaji",
       "english": "76",
       "english_alts": [
         "76",
         "seventy six"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಪ್ಪತ್ತಾರು"
+      ],
       "number": 76,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಳ್ಪ ಏಳ್",
-      "roman": "elpa elu",
+      "tulu": "ಎಲ್ಪತ್ತೇಳ್",
+      "roman": "elpattel",
       "english": "77",
       "english_alts": [
         "77",
         "seventy seven"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಪ್ಪತ್ತೇಳು"
+      ],
       "number": 77,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಳ್ಪ ಎಣ್ಮ",
-      "roman": "elpa enma",
+      "tulu": "ಎಲ್ಪತ್ತೆಣ್ಮ",
+      "roman": "elpattenma",
       "english": "78",
       "english_alts": [
         "78",
         "seventy eight"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಪ್ಪತ್ತೆಂಟು"
+      ],
       "number": 78,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಳ್ಪ ಒರ್ಂಬ",
-      "roman": "elpa ormba",
+      "tulu": "ಎಲ್ಪತ್ತೊರ್ಂಬ",
+      "roman": "elpattormba",
       "english": "79",
       "english_alts": [
         "79",
         "seventy nine"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಪ್ಪತ್ತೊಂಬತ್ತು"
+      ],
       "number": 79,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
@@ -1652,134 +1760,152 @@
       "phrasebook": false
     },
     {
-      "tulu": "ಎಣ್ಪ ಒಂಜಿ",
-      "roman": "enpa onji",
+      "tulu": "ಎಣ್ಪತ್ತೊಂಜಿ",
+      "roman": "enpattonji",
       "english": "81",
       "english_alts": [
         "81",
         "eighty one"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಂಬತ್ತೊಂದು"
+      ],
       "number": 81,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಣ್ಪ ರಡ್ಡ್",
-      "roman": "enpa radd",
+      "tulu": "ಎಣ್ಪತ್ತರಡ್ಡ್",
+      "roman": "enpattaradd",
       "english": "82",
       "english_alts": [
         "82",
         "eighty two"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಂಬತ್ತೆರಡು"
+      ],
       "number": 82,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಣ್ಪ ಮೂಜಿ",
-      "roman": "enpa mooji",
+      "tulu": "ಎಣ್ಪತ್ತಮೂಜಿ",
+      "roman": "enpattamooji",
       "english": "83",
       "english_alts": [
         "83",
         "eighty three"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಂಬತ್ಮೂರು"
+      ],
       "number": 83,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಣ್ಪ ನಾಲ್",
-      "roman": "enpa naal",
+      "tulu": "ಎಣ್ಪತ್ತನಾಲ್",
+      "roman": "enpattanaal",
       "english": "84",
       "english_alts": [
         "84",
         "eighty four"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಂಬತ್ನಾಲ್ಕು"
+      ],
       "number": 84,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಣ್ಪ ಐನ್",
-      "roman": "enpa ain",
+      "tulu": "ಎಣ್ಪತ್ತೈನ್",
+      "roman": "enpattain",
       "english": "85",
       "english_alts": [
         "85",
         "eighty five"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಂಬತ್ತೈದು"
+      ],
       "number": 85,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಣ್ಪ ಆಜಿ",
-      "roman": "enpa aaji",
+      "tulu": "ಎಣ್ಪತ್ತಾಜಿ",
+      "roman": "enpattaaji",
       "english": "86",
       "english_alts": [
         "86",
         "eighty six"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಂಬತ್ತಾರು"
+      ],
       "number": 86,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಣ್ಪ ಏಳ್",
-      "roman": "enpa elu",
+      "tulu": "ಎಣ್ಪತ್ತೇಳ್",
+      "roman": "enpattel",
       "english": "87",
       "english_alts": [
         "87",
         "eighty seven"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಂಬತ್ತೇಳು"
+      ],
       "number": 87,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಣ್ಪ ಎಣ್ಮ",
-      "roman": "enpa enma",
+      "tulu": "ಎಣ್ಪತ್ತೆಣ್ಮ",
+      "roman": "enpattenma",
       "english": "88",
       "english_alts": [
         "88",
         "eighty eight"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಂಬತ್ತೆಂಟು"
+      ],
       "number": 88,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ಎಣ್ಪ ಒರ್ಂಬ",
-      "roman": "enpa ormba",
+      "tulu": "ಎಣ್ಪತ್ತೊರ್ಂಬ",
+      "roman": "enpattormba",
       "english": "89",
       "english_alts": [
         "89",
         "eighty nine"
       ],
-      "kannada": [],
+      "kannada": [
+        "ಎಂಬತ್ತೊಂಬತ್ತು"
+      ],
       "number": 89,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ತೊಂಬ",
-      "roman": "tomba",
+      "tulu": "ಸೊಂಪಾ",
+      "roman": "sonpa",
       "english": "90",
       "english_alts": [
         "90",
@@ -1794,128 +1920,146 @@
       "phrasebook": false
     },
     {
-      "tulu": "ತೊಂಬ ಒಂಜಿ",
-      "roman": "tomba onji",
+      "tulu": "ಸೊಂಪತ್ತೊಂಜಿ",
+      "roman": "sonpattonji",
       "english": "91",
       "english_alts": [
         "91",
         "ninety one"
       ],
-      "kannada": [],
+      "kannada": [
+        "ತೊಂಬತ್ತೊಂದು"
+      ],
       "number": 91,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ತೊಂಬ ರಡ್ಡ್",
-      "roman": "tomba radd",
+      "tulu": "ಸೊಂಪತ್ತರಡ್ಡ್",
+      "roman": "sonpattaradd",
       "english": "92",
       "english_alts": [
         "92",
         "ninety two"
       ],
-      "kannada": [],
+      "kannada": [
+        "ತೊಂಬತ್ತೆರಡು"
+      ],
       "number": 92,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ತೊಂಬ ಮೂಜಿ",
-      "roman": "tomba mooji",
+      "tulu": "ಸೊಂಪತ್ತಮೂಜಿ",
+      "roman": "sonpattamooji",
       "english": "93",
       "english_alts": [
         "93",
         "ninety three"
       ],
-      "kannada": [],
+      "kannada": [
+        "ತೊಂಬತ್ಮೂರು"
+      ],
       "number": 93,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ತೊಂಬ ನಾಲ್",
-      "roman": "tomba naal",
+      "tulu": "ಸೊಂಪತ್ತನಾಲ್",
+      "roman": "sonpattanaal",
       "english": "94",
       "english_alts": [
         "94",
         "ninety four"
       ],
-      "kannada": [],
+      "kannada": [
+        "ತೊಂಬತ್ನಾಲ್ಕು"
+      ],
       "number": 94,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ತೊಂಬ ಐನ್",
-      "roman": "tomba ain",
+      "tulu": "ಸೊಂಪತ್ತೈನ್",
+      "roman": "sonpattain",
       "english": "95",
       "english_alts": [
         "95",
         "ninety five"
       ],
-      "kannada": [],
+      "kannada": [
+        "ತೊಂಬತ್ತೈದು"
+      ],
       "number": 95,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ತೊಂಬ ಆಜಿ",
-      "roman": "tomba aaji",
+      "tulu": "ಸೊಂಪತ್ತಾಜಿ",
+      "roman": "sonpattaaji",
       "english": "96",
       "english_alts": [
         "96",
         "ninety six"
       ],
-      "kannada": [],
+      "kannada": [
+        "ತೊಂಬತ್ತಾರು"
+      ],
       "number": 96,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ತೊಂಬ ಏಳ್",
-      "roman": "tomba elu",
+      "tulu": "ಸೊಂಪತ್ತೇಳ್",
+      "roman": "sonpattel",
       "english": "97",
       "english_alts": [
         "97",
         "ninety seven"
       ],
-      "kannada": [],
+      "kannada": [
+        "ತೊಂಬತ್ತೇಳು"
+      ],
       "number": 97,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ತೊಂಬ ಎಣ್ಮ",
-      "roman": "tomba enma",
+      "tulu": "ಸೊಂಪತ್ತೆಣ್ಮ",
+      "roman": "sonpattenma",
       "english": "98",
       "english_alts": [
         "98",
         "ninety eight"
       ],
-      "kannada": [],
+      "kannada": [
+        "ತೊಂಬತ್ತೆಂಟು"
+      ],
       "number": 98,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },
     {
-      "tulu": "ತೊಂಬ ಒರ್ಂಬ",
-      "roman": "tomba ormba",
+      "tulu": "ಸೊಂಪತ್ತೊರ್ಂಬ",
+      "roman": "sonpattormba",
       "english": "99",
       "english_alts": [
         "99",
         "ninety nine"
       ],
-      "kannada": [],
+      "kannada": [
+        "ತೊಂಬತ್ತೊಂಬತ್ತು"
+      ],
       "number": 99,
-      "composed": true,
+      "composed": false,
       "category": null,
       "phrasebook": false
     },

@@ -82,7 +82,6 @@ function LipiGrid({ block, id, audio }) {
       <ul className="tiles">
         {block.letters.map((l, i) => {
           const key = `${id}:l${i}`;
-          const drawable = l.lipi && font !== false;
           return (
             <li key={i}>
               <button
@@ -91,14 +90,14 @@ function LipiGrid({ block, id, audio }) {
                 onClick={() => audio.play(key, l.kannada)}
                 aria-label={`Play the letter ${l.roman}`}
               >
-                {drawable ? (
+                {l.lipi ? (
                   <span className="lipi tile__glyph">{l.lipi}</span>
                 ) : (
                   <span className="kn-display tile__glyph tile__glyph--sub">{l.kannada}</span>
                 )}
                 <span className="tile__roman">{l.roman}</span>
-                <span className={`tile__meta ${l.lipi ? "" : "is-none"}`}>
-                  {drawable ? l.kannada : l.lipi ? l.cp : "not in Unicode"}
+                <span className="tile__meta">
+                  {l.kannada}
                 </span>
               </button>
             </li>

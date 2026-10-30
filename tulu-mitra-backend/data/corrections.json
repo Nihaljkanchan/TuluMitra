@@ -78,5 +78,37 @@
     "roman": "nalpaain",
     "english": "45 — forty five",
     "approved": 1793287033
+  },
+  {
+    "id": "24f10824a28e",
+    "report": "90c18ac02ef5",
+    "kind": "chat",
+    "input": "encha ulla",
+    "direction": "",
+    "wrong": {
+      "tulu": "ಯಾನ್ ಉಷಾರ್ ಉಲ್ಲೆ. ನೀರ್ ಎಂಚ ಉಲ್ಲರ್?",
+      "roman": "Yaan ushaar ulle. Neer encha ullar?",
+      "english": "I’m fine. How are you?"
+    },
+    "tulu": "ಯಾನ್ ಉಷಾರ್ ಉಲ್ಲೆ. ఈರ್ ಎಂಚ ಉಲ್ಲರ್?",
+    "roman": "Yaan ushaar ulle. eer encha ullar?",
+    "english": "I’m fine. How are you?",
+    "approved": 1793361250
+  },
+  {
+    "id": "5c75d9215719",
+    "report": "5e1914ac5761",
+    "kind": "lesson",
+    "input": "ಮುಪ್ಪ ಒಂಜಿ",
+    "direction": "",
+    "wrong": {
+      "tulu": "ಮುಪ್ಪ ಒಂಜಿ",
+      "roman": "muppa onji",
+      "english": ""
+    },
+    "tulu": "ಮುಪ್ಪತ್ತೊಂಜಿ",
+    "roman": "muppattonji",
+    "english": "",
+    "approved": 1793361531
   }
 ]

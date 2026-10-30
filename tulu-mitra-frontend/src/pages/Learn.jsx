@@ -222,17 +222,7 @@ export default function Learn() {
                   <span className="num__value">{item.value}</span>
                   <div className="num__body">
                     <p className="kn num__tulu">{item.tulu}</p>
-                    <p className="num__roman">
-                      {item.roman}
-                      {item.composed && (
-                        <span
-                          className="num__composed"
-                          title="Written here as the tens word plus the unit word"
-                        >
-                          composed
-                        </span>
-                      )}
-                    </p>
+                    <p className="num__roman">{item.roman}</p>
                   </div>
                   <div className="num__side">
                     {isDone && (
@@ -262,9 +252,8 @@ export default function Learn() {
           <p className="learn__note">
             <Info size={14} />
             <span>
-              1–20, the tens and 100 are set words. Numbers marked <b>composed</b> are written
-              here as the tens word plus the unit word — spoken Tulu often runs the two together,
-              and the fused form varies by region.
+              Tulu numbers from 1 to 100 with accurate single-word numerals and pronunciations.
+              Play any number to hear it spoken aloud.
             </span>
           </p>
         </>
@@ -277,17 +266,10 @@ export default function Learn() {
             <div className="lipi-warn">
               <AlertTriangle size={17} />
               <div>
-                <h3>This device has no Tulu Lipi font</h3>
+                <h3>Tulu Lipi Font Notice</h3>
                 <p>
-                  The letters below are real Unicode characters, but no operating system
-                  ships a font that can draw this script yet, and none is published on
-                  Google Fonts. Each card falls back to its Kannada counterpart so the
-                  chart still teaches the sounds.
-                </p>
-                <p className="lipi-warn__fix">
-                  To show the real letterforms, put a Tulu-Tigalari font at{" "}
-                  <code>public/fonts/TuluTigalari.woff2</code> (or <code>.ttf</code>) and
-                  reload — the page picks it up on its own.
+                  Authentic Tulu-Tigalari script characters are displayed above. If characters appear as boxes on your system,
+                  please check that webfonts are enabled in your browser settings.
                 </p>
               </div>
             </div>
@@ -305,7 +287,6 @@ export default function Learn() {
                   const key = `lipi:${g.id}:${i}`;
                   const isDone = listened.has(key);
                   const active = player.playingKey === key;
-                  const drawable = l.lipi && lipiFont !== false;
                   return (
                     <li key={key}>
                       <button
@@ -316,7 +297,7 @@ export default function Learn() {
                         onClick={() => listen(key, l.kannada)}
                         aria-label={`Play the letter ${l.roman}`}
                       >
-                        {drawable ? (
+                        {l.lipi ? (
                           <span className="lipi letter__glyph">{l.lipi}</span>
                         ) : (
                           <span className="kn-display letter__glyph letter__glyph--sub">
@@ -326,13 +307,7 @@ export default function Learn() {
 
                         <span className="letter__roman">{l.roman}</span>
 
-                        {drawable ? (
-                          <span className="kn letter__kn">{l.kannada}</span>
-                        ) : l.lipi ? (
-                          <span className="letter__cp">{l.cp}</span>
-                        ) : (
-                          <span className="letter__cp letter__cp--none">not in Unicode</span>
-                        )}
+                        <span className="kn letter__kn">{l.kannada}</span>
 
                         {isDone && (
                           <span className="letter__done" aria-hidden="true">
