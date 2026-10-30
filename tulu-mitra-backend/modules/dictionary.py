@@ -20,6 +20,7 @@ import logging
 from collections import Counter, defaultdict
 
 import config
+from modules import llm
 from modules.text_utils import (
     ascii_digits, distance, english_number, is_kannada, kannada_words, key,
     norm, read_number, sound,
@@ -37,6 +38,7 @@ class TuluDictionary:
         self.freq = Counter()
         self.index = defaultdict(list)  # word -> sentence indices
         self.corpus_name = None
+        self._ai_cache = {}
         self._load_lexicon()
         self._load_corpus()
 
@@ -275,6 +277,59 @@ class TuluDictionary:
             }
             fuzzy = False
 
+        # If static lexicon lacks meaning, or only weak fuzzy match, or missing English meaning:
+        needs_ai = (
+            not card
+            or fuzzy
+            or (card and not card.get("english") and not card.get("meanings"))
+        )
+        if needs_ai and llm.available():
+            cache_key = norm(query)
+            ai_data = self._ai_cache.get(cache_key)
+            if ai_data is None:
+                ai_data = llm.lookup_dictionary(query)
+                if ai_data:
+                    self._ai_cache[cache_key] = ai_data
+                    if ai_data.get("tulu"):
+                        self._ai_cache[norm(ai_data["tulu"])] = ai_data
+                    if ai_data.get("roman"):
+                        self._ai_cache[norm(ai_data["roman"])] = ai_data
+
+            if ai_data and ai_data.get("tulu"):
+                ai_tulu = ai_data["tulu"]
+                ai_freq = self.frequency(ai_tulu) if is_kannada(ai_tulu) else 0
+                ai_examples = self.examples(ai_tulu, 6) if ai_freq else []
+                if not ai_examples and ai_data.get("examples"):
+                    ai_examples = [ex for ex in ai_data["examples"] if ex]
+
+                meanings = ai_data.get("meanings") or []
+                if not meanings and ai_data.get("english"):
+                    meanings = [ai_data["english"]]
+                formatted_meanings = [m[:1].upper() + m[1:].rstrip(".") for m in meanings if m]
+
+                sources = ["AI Dictionary"]
+                if ai_freq:
+                    sources.append(f"Corpus ({self.corpus_name})")
+                elif card and card.get("sources"):
+                    for s in card["sources"]:
+                        if s not in sources:
+                            sources.append(s)
+
+                card = {
+                    "word": ai_tulu,
+                    "roman": ai_data.get("roman"),
+                    "english": ai_data.get("english"),
+                    "meanings": formatted_meanings,
+                    "kannada": ai_data.get("kannada") or [],
+                    "frequency": ai_freq or (card.get("frequency") if card else None),
+                    "examples": ai_examples,
+                    "usedIn": self._used_in({"tulu": ai_tulu}),
+                    "sources": sources,
+                    "matchedBy": "AI Dictionary",
+                    "composed": False,
+                }
+                fuzzy = False
+
         related = [
             {"tulu": e["tulu"], "roman": e.get("roman"),
              "english": str(e["number"]) if e.get("number") else e.get("english"), "matchedBy": how}
@@ -303,7 +358,7 @@ class TuluDictionary:
             "fuzzy": fuzzy,
             "related": related,
             "sentences": sentences,
-            "total": len(scored),
+            "total": max(len(scored), 1 if card else 0),
         }
 
     # ---------------------------------------------------- used by other modules

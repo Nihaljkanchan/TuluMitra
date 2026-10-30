@@ -51,7 +51,14 @@ from modules import llm
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 log = logging.getLogger("tulu-mitra")
 
-PAIRS = {("english", "tulu"), ("kannada", "tulu"), ("tulu", "english")}
+PAIRS = {
+    ("english", "tulu"),
+    ("kannada", "tulu"),
+    ("tulu", "english"),
+    ("tulu", "kannada"),
+    ("english", "kannada"),
+    ("kannada", "english"),
+}
 LANGS = {"english", "kannada", "tulu"}
 
 
@@ -184,7 +191,7 @@ def create_app():
         if (not source or not target) and data.get("language_pair"):
             source, _, target = data["language_pair"].partition("-")
         if (source, target) not in PAIRS:
-            abort(400, description="Supported pairs: english-tulu, kannada-tulu, tulu-english")
+            abort(400, description="Supported pairs: english-tulu, kannada-tulu, tulu-english, tulu-kannada, english-kannada, kannada-english")
         if not text:
             abort(400, description="'text' is required")
         fixed = feedback.answer_translation(text, source, target)

@@ -135,3 +135,83 @@ def ask_json(user_text: str, history=None, system: str = SYSTEM) -> dict:
         except json.JSONDecodeError:
             pass
     return {"tulu": "", "roman": "", "english": "", "explanation": raw}
+
+
+DICT_SYSTEM = """You are an expert Tulu language lexicographer and dictionary assistant for Tulu Mitra (ತುಳು ಮಿತ್ರ).
+The user provides a word or search query in English, Tulu (Kannada script or Latin transliteration), or Kannada.
+
+Always return a valid JSON object with exactly these keys:
+{
+  "tulu": "<the word in Tulu, written in Kannada script>",
+  "roman": "<the Tulu word in Latin letters>",
+  "english": "<primary English meaning>",
+  "meanings": ["<English meaning 1>", "<English meaning 2>"],
+  "kannada": ["<equivalent Kannada word in Kannada script>"],
+  "examples": ["<a short example sentence in Tulu, with English meaning in parentheses>"]
+}
+
+Rules:
+- Provide authentic, genuine Tulu language vocabulary.
+- If the query is an English word (e.g. "sky", "dog", "house", "friend", "book", "sun"), give the authentic Tulu word in "tulu" (Kannada script) and its roman transliteration.
+- If the query is in Tulu (e.g. "ಪೊರ್ಲು", "ಬಾಲೆ", "ಕಂಡನಿ"), give its English meanings and Kannada translation.
+- If the query is in Kannada (e.g. "ಶಾಲೆ", "ಮನೆ", "ನೀರು"), give the Tulu word and English meanings.
+- Output ONLY the JSON object, nothing else.
+"""
+
+
+def lookup_dictionary(word: str) -> dict:
+    if not available():
+        return None
+    user_prompt = f"Define this word in the Tulu dictionary: {word.strip()}"
+    try:
+        raw = ask(user_prompt, system=DICT_SYSTEM, max_tokens=400)
+        match = re.search(r"\{.*\}", raw, re.S)
+        if match:
+            data = json.loads(match.group(0))
+            if isinstance(data, dict) and data.get("tulu") and (data.get("english") or data.get("meanings")):
+                return data
+    except Exception as exc:
+        log.warning("LLM dictionary lookup failed for '%s': %s", word, exc)
+    return None
+
+
+TRANSLATE_SYSTEM = """You are an expert translator between English, Kannada, and Tulu (ತುಳು) for Tulu Mitra (ತುಳು ಮಿತ್ರ).
+Translate single words, idioms, phrases, and full sentences accurately into natural, everyday colloquial Tulu / English / Kannada.
+
+Always return a valid JSON object with exactly these keys:
+{
+  "translation": "<the translated text>",
+  "roman": "<Latin transliteration if target is Tulu, otherwise empty string \"\">"
+}
+
+Rules:
+- For Target = Tulu:
+  - Write "translation" in natural Tulu using Kannada script (ಕನ್ನಡ ಲಿಪಿ).
+  - Provide accurate Latin phonetic reading in "roman" (e.g. "enk onas aathiji", "eereg encha undu").
+  - Use authentic everyday Tulu grammar, verb endings, and vocabulary.
+- For Target = English:
+  - Translate accurately into clear, natural English.
+  - "roman" must be "".
+- For Target = Kannada:
+  - Translate into natural Kannada in Kannada script.
+  - "roman" must be "".
+- Handle inputs in English, Kannada script, or Latin transliteration seamlessly.
+- Translate the full sentence meaning, preserving tone, question forms, and intent.
+- Output ONLY the JSON object, nothing else.
+"""
+
+
+def translate_text(text: str, source: str, target: str) -> dict:
+    if not available():
+        return None
+    prompt = f"Translate from {source} to {target}:\n{text.strip()}"
+    try:
+        raw = ask(prompt, system=TRANSLATE_SYSTEM, max_tokens=600)
+        match = re.search(r"\{.*\}", raw, re.S)
+        if match:
+            data = json.loads(match.group(0))
+            if isinstance(data, dict) and data.get("translation"):
+                return data
+    except Exception as exc:
+        log.warning("LLM translation failed for '%s' (%s->%s): %s", text, source, target, exc)
+    return None

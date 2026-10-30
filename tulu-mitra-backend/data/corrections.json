@@ -16,22 +16,6 @@
     "approved": 1790748058
   },
   {
-    "id": "c6546cc07c9d",
-    "report": "e86a6aba4a6f",
-    "kind": "dictionary",
-    "input": "45",
-    "direction": "",
-    "wrong": {
-      "tulu": "ನಲ್ಪ ಐನ್",
-      "roman": "nalpaain",
-      "english": "45 — forty five"
-    },
-    "tulu": "ನ",
-    "roman": "nalpaain",
-    "english": "45 — forty five",
-    "approved": 1792660483
-  },
-  {
     "id": "40600379c612",
     "report": "80c76101411c",
     "kind": "dictionary",
@@ -46,5 +30,53 @@
     "roman": "bus",
     "english": "bus",
     "approved": 1792660758
+  },
+  {
+    "id": "2a8e251ca626",
+    "report": "1238e575bd31",
+    "kind": "dictionary",
+    "input": "father",
+    "direction": "",
+    "wrong": {
+      "tulu": "ಅಪ್ಪೆ",
+      "roman": "appe",
+      "english": "father"
+    },
+    "tulu": "ಅಮ್ಮೆ",
+    "roman": "amme",
+    "english": "father",
+    "approved": 1793287013
+  },
+  {
+    "id": "53d35f4c750f",
+    "report": "ebe8389b3847",
+    "kind": "dictionary",
+    "input": "mother",
+    "direction": "",
+    "wrong": {
+      "tulu": "ಅಮ್ಮೆ",
+      "roman": "amme",
+      "english": "mother"
+    },
+    "tulu": "ಅಪ್ಪೆ",
+    "roman": "Appe",
+    "english": "mother",
+    "approved": 1793287015
+  },
+  {
+    "id": "16ffbe6a7318",
+    "report": "60e95e6970de",
+    "kind": "dictionary",
+    "input": "45",
+    "direction": "",
+    "wrong": {
+      "tulu": "ನಲ್ಪ ಐನ್",
+      "roman": "nalpaain",
+      "english": "45 — forty five"
+    },
+    "tulu": "ನಲ್ಪಐನ್",
+    "roman": "nalpaain",
+    "english": "45 — forty five",
+    "approved": 1793287033
   }
 ]

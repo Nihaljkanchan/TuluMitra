@@ -2,16 +2,11 @@
 Translation between English, Kannada and Tulu.
 
 Order of attempts, most trustworthy first:
-  1. The curated word list — an exact phrase match.
-  2. A word-by-word gloss of the words that are in the list (labelled as
-     such; it is not a sentence translation).
-  3. A language model, if OPENAI_API_KEY or ANTHROPIC_API_KEY is set (labelled as AI translation).
-  4. An honest "not available".
-
-Note on Google: the Google Cloud Translation API does not list Tulu among
-its supported languages, so it is not used here. If your original
-translation.py used an unofficial Google Translate client, you can add it
-as another step in `translate()` below — mark its results as such.
+  1. The curated word list — an exact word or phrase match.
+  2. Language model (OpenAI API / LLM) — full sentence translation with accurate
+     grammar, verb conjugation, and roman transliteration.
+  3. Word-by-word gloss of lexicon words (only when LLM is unavailable).
+  4. Honest "not available".
 """
 
 import logging
@@ -21,23 +16,24 @@ from modules.text_utils import is_kannada, norm
 
 log = logging.getLogger(__name__)
 
-TRANSLATE_SYSTEM = """You translate between English, Kannada and Tulu for Tulu Mitra.
-Return only JSON: {"translation": "...", "roman": "..."}.
-- When the target is Tulu, write it in Kannada script and give "roman" in simple Latin letters.
-- When the target is English or Kannada, "roman" is "".
-- Use common everyday Tulu. If unsure of a word, choose the plainest phrasing you are confident in."""
-
 
 class Translator:
     def __init__(self, dictionary):
         self.d = dictionary
+        self._cache = {}
 
     def translate(self, text: str, source: str, target: str) -> dict:
         text = (text or "").strip()
         if not text:
             return {"translation": "", "transliteration": None, "method": "none"}
 
-        # 1. Exact phrase
+        source = (source or "english").strip().lower()
+        target = (target or "tulu").strip().lower()
+        cache_key = f"{source}:{target}:{norm(text)}"
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+
+        # 1. Exact match from curated word list
         entry = None
         if source == "english":
             entry = self.d.find_english(text)
@@ -45,13 +41,32 @@ class Translator:
             entry = self.d.find_tulu(text)
         if entry:
             if target == "tulu":
-                return {"translation": entry["tulu"], "transliteration": entry.get("roman"), "method": "word list"}
+                res = {"translation": entry["tulu"], "transliteration": entry.get("roman"), "method": "word list"}
+                self._cache[cache_key] = res
+                return res
             if target == "english" and entry.get("english"):
-                return {"translation": entry["english"], "transliteration": None, "method": "word list"}
+                res = {"translation": entry["english"], "transliteration": None, "method": "word list"}
+                self._cache[cache_key] = res
+                return res
             if target == "kannada" and entry.get("kannada"):
-                return {"translation": entry["kannada"][0], "transliteration": None, "method": "word list"}
+                res = {"translation": entry["kannada"][0], "transliteration": None, "method": "word list"}
+                self._cache[cache_key] = res
+                return res
 
-        # 2. Word by word (English → Tulu only)
+        # 2. Language model / AI Translation for words, phrases, and full sentences
+        if llm.available():
+            data = llm.translate_text(text, source, target)
+            if data and data.get("translation"):
+                res = {
+                    "translation": data["translation"],
+                    "transliteration": data.get("roman") or None,
+                    "method": "ai",
+                    "note": "AI translation — please verify with a Tulu speaker.",
+                }
+                self._cache[cache_key] = res
+                return res
+
+        # 3. Fallback word-by-word gloss (only if LLM is unavailable)
         if source == "english" and target == "tulu":
             pieces = [self.d.find_english(w) for w in norm(text).split()]
             known = [p for p in pieces if p and not p.get("number")]
@@ -62,22 +77,6 @@ class Translator:
                     "method": "word by word",
                     "note": "Word-by-word gloss from the word list, not a sentence translation.",
                 }
-
-        # 3. LLM
-        if llm.available():
-            try:
-                data = llm.ask_json(
-                    f"Translate from {source} to {target}:\n{text}", system=TRANSLATE_SYSTEM
-                )
-                if data.get("translation"):
-                    return {
-                        "translation": data["translation"],
-                        "transliteration": data.get("roman") or None,
-                        "method": "ai",
-                        "note": "AI translation — please verify with a Tulu speaker.",
-                    }
-            except llm.LLMError:
-                pass
 
         # 4. Honest miss
         return {
