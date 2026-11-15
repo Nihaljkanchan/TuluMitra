@@ -31,6 +31,12 @@ export default function VoiceUpload() {
   const recorder = useRecorder();
   const player = useAudioPlayer();
 
+  useEffect(() => {
+    const on = (e) => setUsingMine((e.detail ?? getPreferredVoice()) === PERSONAL_VOICE);
+    window.addEventListener("tulumitra:voice", on);
+    return () => window.removeEventListener("tulumitra:voice", on);
+  }, []);
+
   /* Timer while the microphone is live. */
   useEffect(() => {
     if (phase !== "recording") return undefined;
@@ -168,6 +174,8 @@ export default function VoiceUpload() {
     try {
       const r = await uploadVoice(sample.blob);
       setStatus(r.status ?? null);
+      setPreferredVoice(PERSONAL_VOICE);
+      setUsingMine(true);
       setPhase("ready");
     } catch {
       setPhase("error");

@@ -110,5 +110,21 @@
     "roman": "muppattonji",
     "english": "",
     "approved": 1793361531
+  },
+  {
+    "id": "88c59c2b80fa",
+    "report": "3d2ed66af13c",
+    "kind": "chat",
+    "input": "ಹೇಗಿದ್ದೀರಾ.",
+    "direction": "",
+    "wrong": {
+      "tulu": "ಯಾನ್ ಸುಖ ಉಲ್ಲೆ. ನೀರ್ ಎಂಚ ಉಲ್ಲರ್?",
+      "roman": "Yaan sukha ulle. Neer enchullar?",
+      "english": "I’m fine. How are you?"
+    },
+    "tulu": "ಯಾನ್ ಸುಖ ಉಲ್ಲೆ. ఈರ್ ಎಂಚ ಉಲ್ಲರ್?",
+    "roman": "Yaan sukha ulle. eer enchullar?",
+    "english": "I’m fine. How are you?",
+    "approved": 1793388563
   }
 ]

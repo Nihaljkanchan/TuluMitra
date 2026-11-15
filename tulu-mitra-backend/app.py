@@ -136,8 +136,12 @@ def create_app():
         reply = feedback.fix(reply)
         if data.get("with_audio") and reply.get("lang") == "tulu":
             speech = tts.synthesize(reply["response"], data.get("voice_id"))
+
             reply["audio_url"] = audio_url(speech["file"])
             reply["tts_engine"] = speech["engine"]
+
+    # Include TTS performance measurements
+            reply["tts_metrics"] = speech.get("metrics", {})
         else:
             reply["audio_url"] = None
         return jsonify(reply)

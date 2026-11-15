@@ -110,11 +110,21 @@ class ASR:
 
         if lang_lower in ("english", "en"):
             kwargs["language"] = "en"
+            kwargs["temperature"] = 0.0
+            kwargs["prompt"] = "English speech with Tulu and Indian context: Solmelu, Encha ullar, Tulu Mitra, hello, how are you."
         elif lang_lower in ("kannada", "kn"):
             kwargs["language"] = "kn"
+            kwargs["temperature"] = 0.0
+            kwargs["prompt"] = "ಕನ್ನಡ ಮಾತುಕತೆ: ನಮಸ್ಕಾರ, ಹೇಗಿದ್ದೀರಾ, ಊಟ ಆಯ್ತಾ, ನಿಮ್ಮ ಹೆಸರೇನು, ಧನ್ಯವಾದಗಳು, ಬನ್ನಿ, ಕೂತ್ಕೊಳ್ಳಿ, ಶುಭ ದಿನ."
         else:
-            # Tulu context prompt to guide spelling & phonetics
-            kwargs["prompt"] = "ತುಳು ಭಾಷೆ (Tulu language): ಸೊಲ್ಮೆಲು, ಎಂಚ ಉಲ್ಲರ್, ಎಂಕ್ ಎಡ್ಡೆ ಉಂಡು, ಈರೆನ ಪುದರ್ ದಾದ, ವನಸ್ ಆಂಡಾ, ಆಂಡ್, ಆತಿಜಿ, ಬೊಕ್ಕ ತಿಕ್ಕುಗ, ದಾದ."
+            # Tulu is written in Kannada script and maps to Kannada phonemes in Whisper
+            kwargs["language"] = "kn"
+            kwargs["temperature"] = 0.0
+            kwargs["prompt"] = (
+                "ತುಳು ಸಂಭಾಷಣೆ (Tulu speech in Kannada script): "
+                "ಸೊಲ್ಮೆಲು, ಎಂಚ ಉಲ್ಲರ್, ಎಂಕ್ ಎಡ್ಡೆ ಉಂಡು, ಈರೆನ ಪುದರ್ ದಾದ, ವನಸ್ ಆಂಡಾ, ಆಂಡ್, ಆತಿಜಿ, "
+                "ಬೊಕ್ಕ ತಿಕ್ಕುಗ, ದಾದ, ಪೋಯಿ, ಬಲೆ, ಮಾರ್ಗ, ಇಲ್ಲ, ಪೇಂಟೆ, ಪೊರ್ಲು, ಎಡ್ಡೇ, ಕುಲ್ಲುಲೆ, ಬತ್ತಿರಾ, ತೆನಸ್, ನೀರ್."
+            )
 
         with open(str(wav_path), "rb") as f:
             kwargs["file"] = f

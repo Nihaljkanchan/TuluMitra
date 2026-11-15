@@ -25,6 +25,7 @@ import useRecorder from "../hooks/useRecorder";
 import useAudioPlayer from "../hooks/useAudioPlayer";
 import useConversations from "../hooks/useConversations";
 import { asr, chat, isMockMode, tts } from "../services/api";
+import { voiceMode } from "../services/indianVoice";
 import { OPENERS } from "../data/tulu";
 import { MY_NAME_IS } from "../data/greetings";
 import AudioButton from "../components/AudioButton";
@@ -94,8 +95,10 @@ export default function Home() {
 
   const audio = useMemo(
     () => ({
-      play: (key, text, url) =>
-        player.play(key, async () => url ?? tts(text), text),
+      play: (key, text, url) => {
+        const { mode } = voiceMode();
+        return player.play(key, async () => (mode === "personal" ? tts(text) : (url ?? tts(text))), text);
+      },
       playingKey: player.playingKey,
       loadingKey: player.loadingKey,
     }),
@@ -194,7 +197,12 @@ export default function Home() {
         setTypingId(msg.id);
         // A spoken question gets a spoken answer.
         if (speakAfter && msg.lang !== "english" && msg.text) {
-          player.play(msg.id, async () => msg.audioUrl ?? tts(msg.text), msg.text);
+          const { mode } = voiceMode();
+          player.play(
+            msg.id,
+            async () => (mode === "personal" && !msg.personalised ? tts(msg.text) : (msg.audioUrl ?? tts(msg.text))),
+            msg.text
+          );
         }
       } catch {
         if (token !== reqRef.current) return;

@@ -18,7 +18,7 @@ Text-to-speech. Engines are tried in this order:
 Optional personalisation: with VOICE_CONVERSION=knnvc and a voice_id from
 /upload-voice, the output is converted toward that person's voice.
 """
-
+import time
 import hashlib
 import logging
 import threading
@@ -172,52 +172,113 @@ class TTS:
                 wav = self.model(**inputs).waveform[0].cpu().numpy()
         sf.write(str(out), wav, self.model.config.sampling_rate)
 
-    def synthesize(self, text: str, voice_id: str = None):
-        """Speak `text`. Returns a dict:
-            file          name inside AUDIO_DIR, or None when no engine is available
-            engine        which engine spoke
-            personalised  True if the audio was converted to the uploaded voice
-            note          why personalisation was not applied, if it was asked for
-        """
-        result = {"file": None, "engine": None, "personalised": False, "note": None}
-        text = (text or "").strip()
-        if not text:
-            return result
-        with self._lock:
-            try:
-                self._load_safely()
-            except Exception:
-                return result
-            if self.model is None:
-                return result
-            speaker = config.TTS_SPEAKER if self.engine == "indic_parler" else ""
-            base = hashlib.sha1(f"{self.engine}|{speaker}|{text}".encode("utf-8")).hexdigest()[:20] + ".wav"
-            base_path = config.AUDIO_DIR / base
-            if not base_path.exists():
-                self._generate(text, base_path)
-        result.update(file=base, engine=self.engine)
+    
+def synthesize(self, text: str, voice_id: str = None):
+    """Speak text and return audio plus performance measurements."""
 
-        # Personalisation, if asked for. Failure never blocks speech: the
-        # default voice is returned with a note saying why.
-        if voice_id:
-            if not self.voices.enabled:
-                result["note"] = "Personalisation is off on the server (VOICE_CONVERSION=off)."
-            elif not self.voices.path(voice_id):
-                result["note"] = "Your voice sample was not found on the server. Please upload it again."
-            else:
-                name = hashlib.sha1(f"{base}|{voice_id}".encode("utf-8")).hexdigest()[:20] + ".wav"
-                path = config.AUDIO_DIR / name
-                try:
-                    if not path.exists():
-                        self.voices.convert(base_path, path, voice_id)
-                    result.update(file=name, personalised=True)
-                except Exception as exc:
-                    log.warning("Voice conversion failed, using the default voice: %s", exc)
-                    path.unlink(missing_ok=True)  # never cache a half-made file
-                    result["note"] = f"Voice conversion failed: {str(exc)[:200]}"
+    total_start = time.perf_counter()
+    load_time_ms = 0.0
+    generation_time_ms = 0.0
+    conversion_time_ms = 0.0
+    cache_hit = False
 
-        self._trim_cache()
+    result = {
+        "file": None,
+        "engine": None,
+        "personalised": False,
+        "note": None,
+        "metrics": {}
+    }
+
+    text = (text or "").strip()
+
+    if not text:
         return result
+
+    with self._lock:
+        try:
+            load_start = time.perf_counter()
+            self._load_safely()
+            load_time_ms = (time.perf_counter() - load_start) * 1000
+        except Exception:
+            return result
+
+        if self.model is None:
+            return result
+
+        speaker = config.TTS_SPEAKER if self.engine == "indic_parler" else ""
+
+        base = hashlib.sha1(
+            f"{self.engine}|{speaker}|{text}".encode("utf-8")
+        ).hexdigest()[:20] + ".wav"
+
+        base_path = config.AUDIO_DIR / base
+
+        if base_path.exists():
+            cache_hit = True
+        else:
+            generation_start = time.perf_counter()
+            self._generate(text, base_path)
+            generation_time_ms = (
+                time.perf_counter() - generation_start
+            ) * 1000
+
+    result.update(file=base, engine=self.engine)
+
+    if voice_id:
+        if not self.voices.enabled:
+            result["note"] = (
+                "Personalisation is off on the server "
+                "(VOICE_CONVERSION=off)."
+            )
+
+        elif not self.voices.path(voice_id):
+            result["note"] = (
+                "Your voice sample was not found on the server. "
+                "Please upload it again."
+            )
+
+        else:
+            name = hashlib.sha1(
+                f"{base}|{voice_id}".encode("utf-8")
+            ).hexdigest()[:20] + ".wav"
+
+            path = config.AUDIO_DIR / name
+
+            try:
+                if not path.exists():
+                    conversion_start = time.perf_counter()
+                    self.voices.convert(base_path, path, voice_id)
+                    conversion_time_ms = (
+                        time.perf_counter() - conversion_start
+                    ) * 1000
+
+                result.update(file=name, personalised=True)
+
+            except Exception as exc:
+                log.warning(
+                    "Voice conversion failed, using default voice: %s",
+                    exc
+                )
+                path.unlink(missing_ok=True)
+                result["note"] = (
+                    f"Voice conversion failed: {str(exc)[:200]}"
+                )
+
+    total_time_ms = (time.perf_counter() - total_start) * 1000
+
+    result["metrics"] = {
+        "model_load_ms": round(load_time_ms, 2),
+        "generation_ms": round(generation_time_ms, 2),
+        "conversion_ms": round(conversion_time_ms, 2),
+        "total_ms": round(total_time_ms, 2),
+        "cache_hit": cache_hit
+    }
+
+    log.info("TTS performance: %s", result["metrics"])
+
+    self._trim_cache()
+    return result
 
     @staticmethod
     def _trim_cache():
