@@ -56,4 +56,33 @@ Frontend:
 GitHub Repository:
 https://github.com/Nihaljkanchan/TuluMitra
 
-AIL06 System Number: [fill this in yourself]
+AIL06 System Number: PC_01
+
+
+# Copy to .env and edit. Never commit .env.
+
+# Which websites may call this API (comma-separated). Use your real
+# frontend address in production, e.g. https://tulu-mitra.vercel.app
+ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000
+
+# Language model for open questions and AI translation.
+LLM_PROVIDER=openai
+LLM_ENABLED=true
+# ANTHROPIC_API_KEY=sk-ant-...
+# LLM_MODEL=claude-sonnet-5
+
+# Text corpus used by the dictionary (already included, cleaned)
+CORPUS_FILE=data/Tulu_Corpus_clean.txt
+
+# Speech. "auto" uses whatever is installed; "off" disables.
+ASR_MODE=auto
+ASR_ALLOW_BASE_MODEL=true
+WHISPER_BASE_MODEL=openai/whisper-small
+TTS_MODE=auto
+TTS_KANNADA_PROXY=true
+# Personalised voice via kNN-VC: knnvc | off
+VOICE_CONVERSION=knnvc
+ADMIN_PASSWORD=TuluMitra@2026
+GOOGLE_CLIENT_ID=703336280680-1mi0fnceheke63nlkr3be1t3bh82iq8k.apps.googleusercontent.com
+OPENAI_API_KEY=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
+OPENAI_MODEL=gpt-6-luna
